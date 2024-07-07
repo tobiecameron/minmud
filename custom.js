@@ -42,13 +42,19 @@ function imageVideoswap() {
     var heroVideo = $(this).children("video");
     //   var videoElement = heroVideo.get(0);
 
-    heroVideo.addEventListener('loadeddata', function() {
-        // Video is loaded and can be played
+
+    heroVideo.onplay = function() {
+        alert("The video has started to play");
+
         if (!heroVideo.paused) {
             console.log("VIDEO IS PLAYING");
             $(this).find("img").hide();
         }
-    }, false);
+
+    };
+  
+        // Video is loaded and can be played
+
   });
 
   // code = $(this).attr('id');

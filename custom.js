@@ -28,7 +28,9 @@ function imageVideoswap() {
     console.log(heroParent);
 
     $.each(heroParent, function (index, val) {
-        let hero = $(this).("img[src]");
+
+        var src = $('img').attr('src').split('/');
+        var hero = src[src.length - 1];
         console.log(hero);
 
         let filmHero = '<video class="videoControl showreelVideo" controls="" playsinline="" preload="auto" loop="false" style="opacity: 1;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';

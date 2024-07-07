@@ -33,20 +33,16 @@ function imageVideoswap() {
       '" type="video/mp4"></video>';
     // remove
     $(this).append(filmHero);
-
-    // var heroVideo = $(this).children("video");
-
-    //   var videoElement = heroVideo.get(0);
     console.log(hero);
 
-    setTimeout(function () {
-      //do something special
-      hero.onplaying = (event) => {
-        console.log(
-          "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled."
-        );
-      };
-    }, 5000);
+    time = setInterval(function(){
+        if (!hero.paused) {
+            $(this).find("img").hide();
+            clearInterval(time);
+        }
+        }
+        },500);
+
 
     // heroVideo.onplay = function() {
     //     alert("The video has started to play");

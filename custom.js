@@ -40,7 +40,11 @@ function imageVideoswap() {
     time = setInterval(function () {
       if (!hero.paused) {
         
+        gsap.to(".hero-video", .5, {opacity: 1});
+
         $(toRemove).hide();
+
+
         console.log("PLAYING")
         clearInterval(time);
       }

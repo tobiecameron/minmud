@@ -41,19 +41,25 @@ function imageVideoswap() {
 
     var heroVideo = $(this).children("video");
     //   var videoElement = heroVideo.get(0);
-
     console.log(heroVideo);
 
+    heroVideo.addEventListener("play", (event) => {
+        console.log(
+          "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled.",
+        );
+      });
 
-    heroVideo.onplay = function() {
-        alert("The video has started to play");
 
-        if (!heroVideo.paused) {
-            console.log("VIDEO IS PLAYING");
-            $(this).find("img").hide();
-        }
 
-    };
+    // heroVideo.onplay = function() {
+    //     alert("The video has started to play");
+
+    //     if (!heroVideo.paused) {
+    //         console.log("VIDEO IS PLAYING");
+    //         $(this).find("img").hide();
+    //     }
+
+    // };
   
         // Video is loaded and can be played
 

@@ -44,9 +44,14 @@ function imageVideoswap() {
     //   var videoElement = heroVideo.get(0);
     console.log(hero);
 
-    hero.addEventListener("playing", (event) => {
-        console.log("Video is no longer paused");
-      });
+    setTimeout(function() {
+          //do something special
+          hero.addEventListener("playing", (event) => {
+            console.log("Video is no longer paused");
+          });
+        }, 5000);
+
+    
 
     // hero.onplaying = (event) => {
     //     console.log(

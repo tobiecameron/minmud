@@ -29,13 +29,13 @@ function imageVideoswap() {
 
 
     $.each(hero, function (index, val) {
-      38;
 
       // add
     //   $(this).append("<img src='...' />");
 
       // remove
       $(this img).remove();
+      console.log("REMOVED")
     });
 
 

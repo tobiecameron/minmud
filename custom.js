@@ -39,7 +39,10 @@ function imageVideoswap() {
     // remove
     $(this).prepend(filmHero);
 
-    var heroVideo = $(this).children("video");
+    // var heroVideo = $(this).children("video");
+
+    const heroVideo = $(this).querySelector("video");
+
     //   var videoElement = heroVideo.get(0);
     console.log(heroVideo);
 

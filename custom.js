@@ -25,7 +25,7 @@ function imageVideoswap() {
 
   $.each(heroParent, function (index, val) {
     var src = $(this).find("img").attr("src").split("/");
-    var src = src[src.length - 1];
+    var srcImage = src[src.length - 1];
     var hero = src[src.length - 1];
     hero = hero.replace("jpg", "mp4");
     let filmHero =
@@ -41,7 +41,7 @@ function imageVideoswap() {
         let img = $(this).find("img");
         console.log(img)
 
-        $(src).hide()
+        $(srcImage).hide()
         
         console.log("PLAYING")
         clearInterval(time);

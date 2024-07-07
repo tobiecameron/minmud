@@ -31,7 +31,7 @@ $(heroParent).each(function (i, obj) {
 
     // var toRemove = $(this).find("img");
 
-    let heroImage = $(heroParent).child();
+    let heroImage = $(heroParent).children().first();;
     console.log( heroImage);
 
 

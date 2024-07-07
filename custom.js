@@ -46,7 +46,7 @@ function imageVideoswap() {
     //   var videoElement = heroVideo.get(0);
     console.log(heroVideo);
 
-    heroVideo.onplay = (event) => {
+    heroVideo.onplaying = (event) => {
         console.log(
           "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled.",
         );

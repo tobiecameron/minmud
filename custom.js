@@ -27,9 +27,15 @@ function imageVideoswap() {
     let hero = $("img[src*=-hero]").parent();
     console.log(hero);
 
-    $.each(hero, function (index, val) {
 
-   
+    $.each(hero, function (index, val) {
+      38;
+
+      // add
+    //   $(this).append("<img src='...' />");
+
+      // remove
+      $(this img).remove();
     });
 
 

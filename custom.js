@@ -25,6 +25,7 @@ function imageVideoswap() {
   console.log(heroParent);
 
   let i = 1;
+
   $.each(heroParent, function (index, val) {
 
     var toRemove = $(this).find("img");
@@ -33,18 +34,20 @@ function imageVideoswap() {
     var src = $(this).find("img").attr("src").split("/");
     var hero = src[src.length - 1];
     hero = hero.replace("jpg", "mp4");
-    let filmHero =
-      '<video class="hero-video" controls="true" muted autoplay playsinline="" preload="auto" loop="false" style="opacity: 1;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero +'" type="video/mp4"></video>';
 
-    // attahc video to image parent
+    let filmHero = '<video class="hero-video" controls="true" muted autoplay playsinline="" preload="auto" loop="false" style="opacity: 1;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero +'" type="video/mp4"></video>';
+
+    // attach video to image parent
     $(this).prepend(filmHero);
-    console.log(hero);
+    let thisVid = $(this);
+    let currentHero = thisVid.add( hero ); 
+    console.log("currentHero" + currentHero);
 
     time = setInterval(function () {
-      if (!hero.paused) {
-        gsap.to(".hero-video", .5, {opacity: 1});
-        gsap.to(toRemove, .5, {opacity: 0, delay: .5});
-        $(toRemove).hide();
+      if (!currentHero.paused) {
+        gsap.to(currentHero ".hero-video", .5, {opacity: 1});
+        gsap.to(currentHero toRemove, .5, {opacity: 0, delay: .5});
+
         console.log("PLAYING")
         clearInterval(time);
       }

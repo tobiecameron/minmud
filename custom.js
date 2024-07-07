@@ -29,7 +29,7 @@ function imageVideoswap() {
 
 
     $.each(heroParent, function (index, val) {
-        var src = $('img').attr('src').split('/');
+        var src = $(this).('img').attr('src').split('/');
         var hero = src[src.length - 1];
         hero = hero.replace('jpg', 'mp4');
         console.log(hero);

@@ -38,6 +38,7 @@ function imageVideoswap() {
     time = setInterval(function () {
       if (!hero.paused) {
         $(this).find("img").hide();
+        console.log("PLAYING")
         clearInterval(time);
       }
     }, 500);

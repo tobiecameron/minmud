@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 $(document).ready(function () {
     console.log("------- M I N M U D 2beta");
   // $('html, body').animate({scrollTop: $(window.location).top}, 0);
+  imageVideoswap();
 });
 
 // After DOM Calls
-window.onload = function () {
-    imageVideoswap();
-};
+// window.onload = function () {
+//     imageVideoswap();
+// };
 
 
 

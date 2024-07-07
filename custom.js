@@ -24,12 +24,11 @@ let imageFilm = [];
 
 
 function imageVideoswap() {
-
-
-    let hero = $("img[src*=-hero]");
+    let hero = $("img[src*=-hero]").parent();
     console.log(hero);
 
     $.each(hero, function (index, val) {
+
    
     });
 

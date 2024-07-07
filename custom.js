@@ -42,7 +42,7 @@ function imageVideoswap() {
     var heroVideo = $(this).children("video");
     //   var videoElement = heroVideo.get(0);
 
-    if (video.readyState === 4) {
+    if (heroVideo.readyState === 4) {
       if (!heroVideo.paused) {
         console.log("VIDEO IS PLAYING");
         $(this).find("img").hide();

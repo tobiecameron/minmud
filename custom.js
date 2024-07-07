@@ -29,47 +29,42 @@ function imageVideoswap() {
 //   $.each(heroParent, function (index, val) {
 $(heroParent).each(function (i, obj) {
 
-    var toRemove = $(this).find("img");
-    console.log("to remove" + toRemove);
+    // var toRemove = $(this).find("img");
 
-    var src = $(this).find("img").attr("src").split("/");
-    var hero = src[src.length - 1];
-    hero = hero.replace("jpg", "mp4");
+    let heroImage = $(heroParent).child();
+    console.log( heroImage);
 
-    let filmHero = '<video class="hero-video" controls="true" muted autoplay playsinline="" preload="auto" loop="false" style="opacity: 1;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero +'" type="video/mp4"></video>';
 
-    // attach video to image parent
-    $(this).prepend(filmHero);
-    let thisVid = $(this).find("img");
-    let currentHero = thisVid.add( hero );
+
+    // console.log("to remove" + toRemove);
+
+    // var src = $(this).find("img").attr("src").split("/");
+    // var hero = src[src.length - 1];
+    // hero = hero.replace("jpg", "mp4");
+
+    // let filmHero = '<video class="hero-video" controls="true" muted autoplay playsinline="" preload="auto" loop="false" style="opacity: 1;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero +'" type="video/mp4"></video>';
+
+    // // attach video to image parent
+    // $(this).prepend(filmHero);
+    // let thisVid = $(this).find("img");
+    // let currentHero = thisVid.add( hero );
     
     
-    toRemove = thisVid.add( toRemove ); 
+    // toRemove = thisVid.add( toRemove ); 
 
-    console.log("currentHero" + currentHero);
+    // console.log("currentHero" + currentHero);
 
-    time = setInterval(function () {
-      if (!currentHero.paused) {
-        // gsap.to(currentHero ".hero-video", .5, {opacity: 1});
-        // gsap.to(currentHero toRemove, .5, {opacity: 0, delay: .5});
-        $(toRemove).hide();
+    // time = setInterval(function () {
+    //   if (!currentHero.paused) {
+    //     // gsap.to(currentHero ".hero-video", .5, {opacity: 1});
+    //     // gsap.to(currentHero toRemove, .5, {opacity: 0, delay: .5});
+    //     $(toRemove).hide();
 
-        console.log("PLAYING")
-        clearInterval(time);
-      }
-    }, 500);
+    //     console.log("PLAYING")
+    //     clearInterval(time);
+    //   }
+    // }, 500);
 
-    // heroVideo.onplay = function() {
-    //     alert("The video has started to play");
-
-    //     if (!heroVideo.paused) {
-    //         console.log("VIDEO IS PLAYING");
-    //         $(this).find("img").hide();
-    //     }
-
-    // };
-
-    // Video is loaded and can be played
   });
 
   // code = $(this).attr('id');

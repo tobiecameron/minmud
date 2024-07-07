@@ -27,7 +27,7 @@ function imageVideoswap() {
   $.each(heroParent, function (index, val) {
 
     var toRemove = $(this).find("img");
-    console.log("to REMOVE" + toRemove);
+    console.log("to REMOVE" & toRemove);
 
     var src = $(this).find("img").attr("src").split("/");
     var hero = src[src.length - 1];
@@ -37,12 +37,10 @@ function imageVideoswap() {
 
     // attahc video to image parent
     $(this).prepend(filmHero);
-
     console.log(hero);
 
     time = setInterval(function () {
       if (!hero.paused) {
-        
         gsap.to(".hero-video", .5, {opacity: 1});
         gsap.to(toRemove, .5, {opacity: 0, delay: .5});
         $(toRemove).hide();

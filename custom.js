@@ -58,7 +58,7 @@ $(heroParent).each(function (i, obj) {
     //   if (!currentHero.paused) {
     //     // gsap.to(currentHero ".hero-video", .5, {opacity: 1});
     //     // gsap.to(currentHero toRemove, .5, {opacity: 0, delay: .5});
-    //     $(toRemove).hide();
+        $(heroImage).hide();
 
     //     console.log("PLAYING")
     //     clearInterval(time);

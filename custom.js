@@ -29,7 +29,7 @@ function imageVideoswap() {
   $.each(heroParent, function (index, val) {
 
     var toRemove = $(this).find("img");
-    console.log(toRemove);
+    console.log("to remove" + toRemove);
 
     var src = $(this).find("img").attr("src").split("/");
     var hero = src[src.length - 1];
@@ -39,8 +39,10 @@ function imageVideoswap() {
 
     // attach video to image parent
     $(this).prepend(filmHero);
-    let thisVid = $(this);
-    let currentHero = thisVid.add( hero ); 
+    let thisVid = $(this).find("img");
+    let currentHero = thisVid.add( hero );
+    
+    
     toRemove = thisVid.add( toRemove ); 
 
     console.log("currentHero" + currentHero);

@@ -31,9 +31,9 @@ $(heroParent).each(function (i, obj) {
 
     // var toRemove = $(this).find("img");
 
-    let heroImage = $(heroParent).children().first();;
-    console.log( heroImage);
-
+    let heroImage = $(heroParent).children().first();
+    console.log(heroImage);
+    $(heroImage).hide();
 
 
     // console.log("to remove" + toRemove);
@@ -58,7 +58,7 @@ $(heroParent).each(function (i, obj) {
     //   if (!currentHero.paused) {
     //     // gsap.to(currentHero ".hero-video", .5, {opacity: 1});
     //     // gsap.to(currentHero toRemove, .5, {opacity: 0, delay: .5});
-        $(heroImage).hide();
+
 
     //     console.log("PLAYING")
     //     clearInterval(time);

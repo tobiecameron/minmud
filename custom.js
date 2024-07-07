@@ -42,12 +42,13 @@ function imageVideoswap() {
     var heroVideo = $(this).children("video");
     //   var videoElement = heroVideo.get(0);
 
-    if (heroVideo.readyState === 4) {
-      if (!heroVideo.paused) {
-        console.log("VIDEO IS PLAYING");
-        $(this).find("img").hide();
-      }
-    }
+    heroVideo.addEventListener('loadeddata', function() {
+        // Video is loaded and can be played
+        if (!heroVideo.paused) {
+            console.log("VIDEO IS PLAYING");
+            $(this).find("img").hide();
+        }
+    }, false);
   });
 
   // code = $(this).attr('id');

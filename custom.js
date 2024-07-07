@@ -37,7 +37,11 @@ function imageVideoswap() {
 
     time = setInterval(function () {
       if (!hero.paused) {
-        $(this).find("img").hide();
+        
+        let img = $(this).find("img");
+        
+        console.log(img)
+        
         console.log("PLAYING")
         clearInterval(time);
       }

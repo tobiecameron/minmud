@@ -32,7 +32,7 @@ $(heroParent).each(function (i, obj) {
     // var toRemove = $(this).find("img");
 
     let heroImage = $(heroParent).children().first();
-    console.log(heroImage);
+    // console.log(heroImage);
     // $(heroImage).hside();
 
     // ...

@@ -35,6 +35,8 @@ $(heroParent).each(function (i, obj) {
     console.log(heroImage);
     // $(heroImage).hside();
 
+    // ...
+
 
     // console.log("to remove" + toRemove);
 

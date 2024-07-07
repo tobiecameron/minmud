@@ -24,11 +24,14 @@ let imageFilm = [];
 
 
 function imageVideoswap() {
-    let hero = $("img[src*=-hero]").parent();
-    console.log(hero);
+    let heroParent = $("img[src*=-hero]").parent();
+    console.log(heroParent);
 
+    $.each(heroParent, function (index, val) {
+        let hero = (this).$("img[src]");
+        console.log(hero);
 
-    $.each(hero, function (index, val) {
+        let filmHero = '<video class="videoControl showreelVideo" controls="" playsinline="" preload="auto" loop="false" style="opacity: 1;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 
       // add
     //   $(this).append("<img src='...' />");
@@ -36,6 +39,13 @@ function imageVideoswap() {
       // remove
       $("img").hide();
       console.log("REMOVED");
+
+      $(this).append(filmHero);
+
+      
+
+      
+
     });
 
 

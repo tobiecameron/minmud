@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 // Early JS calls
 $(document).ready(function () {
-    console.log("------- M I N M U D 2beta");
+  console.log("------- M I N M U D 2beta");
   // $('html, body').animate({scrollTop: $(window.location).top}, 0);
   imageVideoswap();
 });
@@ -16,13 +16,8 @@ $(document).ready(function () {
 //     imageVideoswap();
 // };
 
-
-
-
-
 // Creaet an array for all film objects to be added
 let imageFilm = [];
-
 
 function imageVideoswap() {
   let heroParent = $('img[src$="-hero.jpg"]').parent();
@@ -44,22 +39,14 @@ function imageVideoswap() {
     //   var videoElement = heroVideo.get(0);
     console.log(hero);
 
-    setTimeout(function() {
-          //do something special
-          hero.addEventListener("playing", (event) => {
-            console.log("Video is no longer paused");
-          });
-        }, 5000);
-
-    
-
-    // hero.onplaying = (event) => {
-    //     console.log(
-    //       "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled.",
-    //     );
-    //   };
-      
-
+    setTimeout(function () {
+      //do something special
+      hero.onplaying = (event) => {
+        console.log(
+          "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled."
+        );
+      };
+    }, 5000);
 
     // heroVideo.onplay = function() {
     //     alert("The video has started to play");
@@ -70,9 +57,8 @@ function imageVideoswap() {
     //     }
 
     // };
-  
-        // Video is loaded and can be played
 
+    // Video is loaded and can be played
   });
 
   // code = $(this).attr('id');
@@ -88,4 +74,3 @@ function imageVideoswap() {
   //     $(a).prop("href", c);
   //   });
 }
-

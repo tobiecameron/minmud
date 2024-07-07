@@ -41,12 +41,15 @@ function imageVideoswap() {
     $(this).prepend(filmHero);
     let thisVid = $(this);
     let currentHero = thisVid.add( hero ); 
+    toRemove = thisVid.add( toRemove ); 
+
     console.log("currentHero" + currentHero);
 
     time = setInterval(function () {
       if (!currentHero.paused) {
-        gsap.to(currentHero ".hero-video", .5, {opacity: 1});
-        gsap.to(currentHero toRemove, .5, {opacity: 0, delay: .5});
+        // gsap.to(currentHero ".hero-video", .5, {opacity: 1});
+        // gsap.to(currentHero toRemove, .5, {opacity: 0, delay: .5});
+        $(toRemove).hide();
 
         console.log("PLAYING")
         clearInterval(time);

@@ -24,9 +24,12 @@ function imageVideoswap() {
   let heroParent = $('img[src$="-hero.jpg"]').parent();
   console.log(heroParent);
 
-  $.each(heroParent, function (index, val) {
+  let i = 1;
 
-    var toRemove = $(this).find("img");
+  $.each(heroParent, function (index, val) {
+    i++;
+    var theImage = $(this).find("img");
+    var toRemove = theImage + i;
     console.log(toRemove);
 
     var src = $(this).find("img").attr("src").split("/");

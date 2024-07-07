@@ -26,7 +26,8 @@ function imageVideoswap() {
 
   let i = 1;
 
-  $.each(heroParent, function (index, val) {
+//   $.each(heroParent, function (index, val) {
+$(heroParent).each(function (i, obj) {
 
     var toRemove = $(this).find("img");
     console.log("to remove" + toRemove);

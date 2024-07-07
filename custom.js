@@ -35,7 +35,7 @@ function imageVideoswap() {
         console.log(hero);
         let filmHero = '<video class="hero-video" controls="true" autoplay="autoplay" playsinline="" preload="auto" loop="false" style="opacity: 1;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
       // remove
-      $("img").hide();
+      $(this).find('img').hide();
       $(this).append(filmHero);
 
     });

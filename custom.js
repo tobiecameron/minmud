@@ -34,7 +34,7 @@ function imageVideoswap() {
       '<video class="hero-video" controls="true" muted autoplay playsinline="" preload="auto" loop="false" style="opacity: 1;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero +'" type="video/mp4"></video>';
 
     // attahc video to image parent
-    $(this).append(filmHero);
+    $(this).prepend(filmHero);
     console.log(hero);
 
     time = setInterval(function () {

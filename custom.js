@@ -32,7 +32,7 @@ function imageVideoswap() {
       hero +
       '" type="video/mp4"></video>';
     // remove
-    $(this).prepend(filmHero);
+    $(this).append(filmHero);
 
     // var heroVideo = $(this).children("video");
 

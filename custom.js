@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 $(document).ready(function () {
   console.log("------- M I N M U D 2beta");
   // $('html, body').animate({scrollTop: $(window.location).top}, 0);
-  imageVideoswap();
+//   imageVideoswap();
+  setTimeout(imageVideoswap(), 2000);
 });
 
 // After DOM Calls
@@ -35,12 +36,14 @@ function imageVideoswap() {
 
     // attahc video to image parent
     $(this).prepend(filmHero);
+
     console.log(hero);
 
     time = setInterval(function () {
       if (!hero.paused) {
         
         gsap.to(".hero-video", .5, {opacity: 1});
+        gsap.to(toRemove, .5, {opacity: 0, delay: .5});
 
         $(toRemove).hide();
 

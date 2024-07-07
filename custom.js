@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 // Early JS calls
 $(document).ready(function () {
+    console.log("------- M I N M U D 2beta");
   // $('html, body').animate({scrollTop: $(window.location).top}, 0);
 });
 

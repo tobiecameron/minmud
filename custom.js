@@ -42,6 +42,8 @@ function imageVideoswap() {
     var heroVideo = $(this).children("video");
     //   var videoElement = heroVideo.get(0);
 
+    console.log(heroVideo);
+
 
     heroVideo.onplay = function() {
         alert("The video has started to play");

@@ -38,9 +38,10 @@ function imageVideoswap() {
       $(this).append(filmHero);
 
       var heroVideo = $(this).children('video');
-      var videoElement = heroVideo.get(0);
+    //   var videoElement = heroVideo.get(0);
       
-      if (!videoElement.paused) {
+      if (!heroVideo.paused) {
+        console.log("VIDEO IS PLAYING");
         $(this).find('img').hide();
       } 
     });

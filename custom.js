@@ -35,14 +35,12 @@ function imageVideoswap() {
     $(this).append(filmHero);
     console.log(hero);
 
-    time = setInterval(function(){
-        if (!hero.paused) {
-            $(this).find("img").hide();
-            clearInterval(time);
-        }
-        }
-        },500);
-
+    time = setInterval(function () {
+      if (!hero.paused) {
+        $(this).find("img").hide();
+        clearInterval(time);
+      }
+    }, 500);
 
     // heroVideo.onplay = function() {
     //     alert("The video has started to play");

@@ -34,7 +34,7 @@ function imageVideoswap() {
     //   $(this).append("<img src='...' />");
 
       // remove
-      $(this > "img").remove();
+      $("img").hide();
       console.log("REMOVED");
     });
 

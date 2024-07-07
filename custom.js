@@ -27,7 +27,6 @@ function imageVideoswap() {
     let heroParent = $('img[src$="-hero.jpg"]').parent();
     console.log(heroParent);
 
-
     $.each(heroParent, function (index, val) {
         var src = $(this).find('img').attr('src').split('/');
         var hero = src[src.length - 1];
@@ -40,6 +39,13 @@ function imageVideoswap() {
       var heroVideo = $(this).children('video');
     //   var videoElement = heroVideo.get(0);
       
+    if ( video.readyState === 4 ) {
+        if (!heroVideo.paused) {
+            console.log("VIDEO IS PLAYING");
+            $(this).find('img').hide();
+          } 
+    }
+
       if (!heroVideo.paused) {
         console.log("VIDEO IS PLAYING");
         $(this).find('img').hide();

@@ -31,7 +31,6 @@ function imageVideoswap() {
     var src = $(this).find("img").attr("src").split("/");
     var hero = src[src.length - 1];
     hero = hero.replace("jpg", "mp4");
-    console.log(hero);
     let filmHero =
       '<video class="hero-video" controls="true" muted autoplay playsinline="" preload="auto" loop="false" style="opacity: 1;"><source id="videoMP4" src="https://minmud.vercel.app/film/' +
       hero +
@@ -41,12 +40,10 @@ function imageVideoswap() {
 
     // var heroVideo = $(this).children("video");
 
-    const heroVideo = $(this).querySelector("video");
-
     //   var videoElement = heroVideo.get(0);
-    console.log(heroVideo);
+    console.log(hero);
 
-    heroVideo.onplaying = (event) => {
+    hero.onplaying = (event) => {
         console.log(
           "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled.",
         );

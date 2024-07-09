@@ -52,7 +52,7 @@ $(heroParent).each(function (i, obj) {
     let currentHero = thisVid.add( hero );
     
     
-    toRemove = thisVid.add( toRemove ); 
+    // toRemove = thisVid.add( toRemove ); 
 
     console.log("currentHero" + currentHero);
 

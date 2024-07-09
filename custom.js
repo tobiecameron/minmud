@@ -58,7 +58,7 @@ $(heroParent).each(function (i, obj) {
 
     time = setInterval(function () {
       if (!currentHero.paused) {
-        // gsap.to(currentHero ".hero-video", .5, {opacity: 1});
+        gsap.to(currentHero ".hero-video", .5, {opacity: 1});
         // gsap.to(currentHero toRemove, .5, {opacity: 0, delay: .5});
 
 

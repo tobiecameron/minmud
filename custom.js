@@ -38,7 +38,7 @@ $(heroParent).each(function (i, obj) {
     // ...
 
 
-    console.log("to remove" + toRemove);
+    // console.log("to remove" + toRemove);
 
     var src = $(this).find("img").attr("src").split("/");
     var hero = src[src.length - 1];

@@ -37,8 +37,8 @@ function imageVideoswap() {
 
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     let src = $(this).find("img").attr("src").split("/");
-    let Filename = src.pop();
-    console.log(Filename);
+    // let Filename = src.pop();
+    // console.log(Filename);
 
     let hero = src[src.length - 1];
     hero = hero.replace("jpg", "mp4");

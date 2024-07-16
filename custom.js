@@ -46,14 +46,14 @@ function imageVideoswap() {
 
     // add video to the source images parent div
     $(this).prepend(filmHero);
-    // let currImage = $(this).find("img");
+    let currImage = $(this).find("img");
     // console.log("current Image" + currImage);
 
     time = setInterval(function () {
       if (!filmHero.paused) {
         clearInterval(time);
         console.log("PLAYING")
-        gsap.to(Filename, 1, { opacity: .5});
+        gsap.to(currImage, 1, { opacity: .5});
         
 
         // Filename.hide();

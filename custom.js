@@ -47,18 +47,20 @@ function imageVideoswap() {
     // add video to the source images parent div
     $(this).prepend(filmHero);
     let currImage = $(this).find("img");
+    gsap.to(currImage, 1, { opacity: .5, delay: 1});
+
     // console.log("current Image" + currImage);
 
-    time = setInterval(function () {
-      if (!filmHero.paused) {
-        clearInterval(time);
-        console.log("PLAYING")
-        gsap.to(currImage, 1, { opacity: .5});
+    // time = setInterval(function () {
+    //   if (!filmHero.paused) {
+    //     clearInterval(time);
+    //     console.log("PLAYING")
+    //     gsap.to(currImage, 1, { opacity: .5, delay: 1});
         
 
-        // Filename.hide();
-      }
-    }, 500);
+    //     // Filename.hide();
+    //   }
+    // }, 500);
   });
 
 }

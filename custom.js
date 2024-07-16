@@ -53,7 +53,10 @@ function imageVideoswap() {
       if (!filmHero.paused) {
         clearInterval(time);
         console.log("PLAYING")
-        Filename.hide();
+        gsap.to(Filename, 1, { opacity: .5});
+        
+
+        // Filename.hide();
       }
     }, 500);
   });

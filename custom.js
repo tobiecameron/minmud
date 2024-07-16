@@ -49,13 +49,9 @@ function imageVideoswap() {
     let currVideo = $(this).find("video");
     let currImage = $(this).find("img");
 
-    // gsap.to(currImage, 1, { opacity: .5, delay: 1});
-
-
     $(currVideo).on({
       play: function() {
-        // $(this).next().removeClass('lazy_anim');
-        gsap.to(currImage, 1, { opacity: .5, delay: 1});
+        gsap.to(currImage, .5, { opacity: 0});
       }
     });
   });

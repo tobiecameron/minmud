@@ -57,3 +57,37 @@ function imageVideoswap() {
   });
 
 }
+
+
+
+// Limitation: Does not work if the element is
+// out of view because it is too far right or left
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+setInterval(function() {
+  $('video').each(function(){
+
+      let id = $(this).attr("id");
+      let played = $(this).attr("played");
+
+      if ($(this).isInViewport()) {
+          if (played == "false") { 
+              $(this)[0].play();
+              $(this).attr("played", "true");  
+          }
+      } else {
+          if (played == "true") { 
+              $(this)[0].pause();
+              $(this).attr("played", "false");  
+          }
+      }
+  });
+}, 1000);

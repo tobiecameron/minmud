@@ -48,10 +48,9 @@ function imageVideoswap() {
 
     time = setInterval(function () {
       if (!filmHero.paused) {
+        clearInterval(time);
         console.log("PLAYING")
         currImage.hide();
-        // $(this).find("img").hide();
-        clearInterval(time);
       }
     }, 500);
 

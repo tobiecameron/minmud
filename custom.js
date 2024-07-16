@@ -47,7 +47,7 @@ function imageVideoswap() {
     console.log("current Image" + currImage);
 
     time = setInterval(function () {
-      if (!$(this).filmHero.paused) {
+      if (!filmHero.paused) {
         console.log("PLAYING")
         currImage.hide();
         // $(this).find("img").hide();

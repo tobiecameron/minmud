@@ -44,9 +44,7 @@ function imageVideoswap() {
     // add video to the source images parent div
     $(this).prepend(filmHero);
     let currImage = $(this).find("img");
-
-
-    // console.log("currentHero" + currentHero);
+    console.log("current Image" + currImage);
 
     time = setInterval(function () {
       if (!filmHero.paused) {

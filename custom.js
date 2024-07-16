@@ -49,7 +49,7 @@ function imageVideoswap() {
     console.log("currentHero" + currentHero);
 
     time = setInterval(function () {
-      if (!currentHero.paused) {
+      if (!filmHero.paused) {
         console.log("PLAYING")
         currImage.hide();
         clearInterval(time);

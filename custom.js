@@ -37,7 +37,7 @@ function imageVideoswap() {
 
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     var src = $(this).find("img").attr("src").split("/");
-    var Filename= src.pop();
+    var Filename = src.pop();
     console.log(Filename);
 
     var hero = src[src.length - 1];
@@ -46,14 +46,14 @@ function imageVideoswap() {
 
     // add video to the source images parent div
     $(this).prepend(filmHero);
-    let currImage = $(this).find("img");
-    console.log("current Image" + currImage);
+    // let currImage = $(this).find("img");
+    // console.log("current Image" + currImage);
 
     time = setInterval(function () {
       if (!filmHero.paused) {
         clearInterval(time);
         console.log("PLAYING")
-        currImage.hide();
+        Filename.hide();
       }
     }, 500);
   });

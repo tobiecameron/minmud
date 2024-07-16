@@ -46,21 +46,18 @@ function imageVideoswap() {
 
     // add video to the source images parent div
     $(this).prepend(filmHero);
+    let currVideo = $(this).find("video");
     let currImage = $(this).find("img");
-    gsap.to(currImage, 1, { opacity: .5, delay: 1});
 
-    // console.log("current Image" + currImage);
+    // gsap.to(currImage, 1, { opacity: .5, delay: 1});
 
-    // time = setInterval(function () {
-    //   if (!filmHero.paused) {
-    //     clearInterval(time);
-    //     console.log("PLAYING")
-    //     gsap.to(currImage, 1, { opacity: .5, delay: 1});
-        
 
-    //     // Filename.hide();
-    //   }
-    // }, 500);
+    $(currVideo).on({
+      play: function() {
+        // $(this).next().removeClass('lazy_anim');
+        gsap.to(currImage, 1, { opacity: .5, delay: 1});
+      }
+    });
   });
 
 }

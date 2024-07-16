@@ -43,14 +43,14 @@ function imageVideoswap() {
 
     // add video to the source images parent div
     $(this).prepend(filmHero);
-    let currImage = $(this).find("img");
+    let currImage = $(this).find("img").attr('name');;
     console.log("current Image" + currImage);
 
     time = setInterval(function () {
       if (!filmHero.paused) {
         console.log("PLAYING")
-        // currImage.hide();
-        $(this).find("img").hide();
+        currImage.hide();
+        // $(this).find("img").hide();
         clearInterval(time);
       }
     }, 500);

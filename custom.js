@@ -9,7 +9,12 @@ $(document).ready(function () {
   console.log("------- M I N M U D 2beta");
   // $('html, body').animate({scrollTop: $(window.location).top}, 0);
   //   imageVideoswap();
-  setTimeout(imageVideoswap(), 2000);
+
+
+  if ( window.frameElement !== null ) {
+    setTimeout(imageVideoswap(), 0);
+  }
+
 });
 
 // After DOM Calls
@@ -59,6 +64,7 @@ function imageVideoswap() {
 }
 
 
+// THE FOLLOWING MAY NOT BE NECCESARY WITH CHROME/SQUAREPACE BUILT IN PAUSE WHEN OUT OF FOCUS
 
 // Limitation: Does not work if the element is
 // out of view because it is too far right or left

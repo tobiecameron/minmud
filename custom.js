@@ -10,8 +10,7 @@ $(document).ready(function () {
   // $('html, body').animate({scrollTop: $(window.location).top}, 0);
   //   imageVideoswap();
 
-
-  if ( window.frameElement !== null ) {
+  if ( window.frameElement == null ) {
     setTimeout(imageVideoswap(), 0);
   }
 

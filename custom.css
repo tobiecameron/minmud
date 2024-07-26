@@ -1,4 +1,25 @@
 .hero-video {
     width: 100%;
     /* opacity: 0; */
-} 
+}
+
+.slide .image-slide-title {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.image-slide-title span {
+    position: absolute !important;
+    top: 80px;
+    left: 80px;
+    z-index: 999999;
+    font-size: 10px !important;
+    font-family: monospace !important;
+}

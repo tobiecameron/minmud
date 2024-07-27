@@ -74,11 +74,13 @@ function imageVideoswap() {
 // ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
 function sectionVideoControls() {
 
-  let i = 1;
+  let i = 0;
 
   $(".section-background").each(function (i, obj) {
 
     if ($(this).find('.hero-video').length !== 0) {
+
+      i++
       console.log("VIDEO BACKGROUND DETECTED")
       let currVideo = $(this).find("video");
       console.log(currVideo);
@@ -124,7 +126,7 @@ function sectionVideoControls() {
 
 
     }
-    i++
+
   });
 }
 

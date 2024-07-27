@@ -75,7 +75,10 @@ function sectionVideoControls() {
   $(".section-background").each(function (i, obj) {
     console.log("SECTION BACKGROUND ALERT" + i)
 
-    if ($(this).hasClass('hero-video')) {
+    if ($(this).find('.hero-video').length !== 0) {
+
+
+   
       console.log("VIDEO BACKGROUND DETECTED")
       // let sectionOverlay = $('img[src$="-hero.jpg"]').parent();
 

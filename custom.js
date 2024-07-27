@@ -77,8 +77,12 @@ function sectionVideoControls() {
       console.log("VIDEO BACKGROUND DETECTED")
       let currVideo = $(this).find("video");
       console.log(currVideo);
+      
       let overlayDiv = $(this).parent().siblings().first().find(".content");
       console.log(overlayDiv);
+
+      let thisOverlayDiv = overlayDiv;
+      $(thisOverlayDiv).append('<img class="playControl" src="https://minmud.vercel.app/controls/play.svg"');
 
       // let filmHero = '<video class="hero-video" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 

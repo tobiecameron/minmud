@@ -66,9 +66,11 @@ function imageVideoswap() {
 
 // ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
 function sectionVideoControls() {
+
+  console.log("RUNNING VIDEO BACKGROUND")
   // let i = 1;
 
-  $(section - background).each(function (i, obj) {
+  $(".section-background").each(function (i, obj) {
     if ($(this).hasClass('hero-video')) {
       console.log("VIDEO BACKGROUND DETECTED")
       // let sectionOverlay = $('img[src$="-hero.jpg"]').parent();

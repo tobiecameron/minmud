@@ -12,7 +12,9 @@ $(document).ready(function () {
 
   if ( window.frameElement == null ) {
     imageVideoswap();
-    sectionVideoControls()
+    // sectionVideoControls()
+
+    setTimeout(sectionVideoControls,2000)
   }
 
 });

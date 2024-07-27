@@ -33,9 +33,10 @@ function imageVideoswap() {
   let heroParent = $('img[src$="-hero.jpg"]').parent();
   console.log(heroParent);
 
-  let i = 1;
+  let i = 0;
 
   $(heroParent).each(function (i, obj) {
+    i++;
 
     let heroImage = $(heroParent).children().first();
 
@@ -49,7 +50,7 @@ function imageVideoswap() {
 
     let videoControl = "videoControl" + 1; 
 
-    let filmHero = '<video class="hero-video' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
+    let filmHero = '<video class="hero-video ' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 
     // let filmHero = '<video class="hero-video" controls="false" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 
@@ -63,7 +64,7 @@ function imageVideoswap() {
         gsap.to(currImage, .5, { opacity: 0});
       }
     });
-    i++;
+
   });
 
 }

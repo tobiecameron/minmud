@@ -92,13 +92,14 @@ function sectionVideoControls() {
       // });
     
       var playButton = document.getElementById(thisplayControl);
-      var videotoControl = 'videoControl' + x;
+      var videotoControl = ('videoControl' + x).get(0);
 
-      var videoSrc.src = _src;
+      console.log(videotoControl)
+
       // Event listener for the play/pause button
       playButton.addEventListener("click", function() {
 
-        videoSrc.pause();
+        videotoControl.pause();
 
         // if (currVideo.paused == true) {
         //   // Play the video

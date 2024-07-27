@@ -11,7 +11,8 @@ $(document).ready(function () {
   //   imageVideoswap();
 
   if ( window.frameElement == null ) {
-    setTimeout(imageVideoswap(), 0);
+    imageVideoswap();
+
   }
 
 });
@@ -61,6 +62,31 @@ function imageVideoswap() {
   });
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 

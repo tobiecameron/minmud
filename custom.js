@@ -83,7 +83,7 @@ function sectionVideoControls() {
       x++
       console.log("VIDEO BACKGROUND DETECTED")
       let currVideo = $(this).find("video");
-      console.log(currVideo);
+      console.log("This is the Video" + currVideo);
       
       let overlayDiv = $(this).parent().siblings().first().find(".content");
       console.log(overlayDiv);

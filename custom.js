@@ -46,7 +46,10 @@ function imageVideoswap() {
 
     let hero = src[src.length - 1];
     hero = hero.replace("jpg", "mp4");
-    let filmHero = '<video class="hero-video" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
+
+    let videoControl = "videoControl" + 1; 
+
+    let filmHero = '<video class="hero-video' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 
     // let filmHero = '<video class="hero-video" controls="false" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 
@@ -60,6 +63,7 @@ function imageVideoswap() {
         gsap.to(currImage, .5, { opacity: 0});
       }
     });
+    i++;
   });
 
 }
@@ -81,9 +85,9 @@ function sectionVideoControls() {
       let overlayDiv = $(this).parent().siblings().first().find(".content");
       console.log(overlayDiv);
 
-      let thisOverlayDiv = overlayDiv;
+      let thisplayControl = "play" + i;
 
-      $(overlayDiv).append('<img class="playControl" src="https://minmud.vercel.app/controls/play.svg">');
+      $(overlayDiv).append('<img class="playControl ' + thisplayControl + '" src="https://minmud.vercel.app/controls/play.svg">');
 
       // let filmHero = '<video class="hero-video" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 

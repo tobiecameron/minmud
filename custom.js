@@ -87,13 +87,15 @@ function sectionVideoControls() {
 
       var playButton = document.getElementById(thisplayControl);
       // var videoto = ('videoControl' + x);
+
+      var vid = document.getElementById('videoControl' + x);
       // var videotoControl = videoto.get(0);
       // console.log(videotoControl);
 
       // Event listener for the play/pause button
       playButton.addEventListener("click", function() {
 
-        ("#videotoControl1").pause();
+        vid.pause();
 
         // if (currVideo.paused == true) {
         //   // Play the video

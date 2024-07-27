@@ -85,21 +85,15 @@ function sectionVideoControls() {
       let thisplayControl = "play" + x;
       $(overlayDiv).append('<img id="'+ thisplayControl +'" class="playControl ' + thisplayControl + '" src="https://minmud.vercel.app/controls/play.svg">');
 
-      // $(currVideo).on({
-      //   play: function () {
-      //     gsap.to(currImage, .5, { opacity: 0 });
-      //   }
-      // });
-    
       var playButton = document.getElementById(thisplayControl);
-      var videoto = ('videoControl' + x);
-      var videotoControl = videoto.get(0);
-      console.log(videotoControl)
+      // var videoto = ('videoControl' + x);
+      // var videotoControl = videoto.get(0);
+      // console.log(videotoControl);
 
       // Event listener for the play/pause button
       playButton.addEventListener("click", function() {
 
-        videotoControl.pause();
+        videotoControl1.pause();
 
         // if (currVideo.paused == true) {
         //   // Play the video

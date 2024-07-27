@@ -76,21 +76,13 @@ function sectionVideoControls() {
     console.log("SECTION BACKGROUND ALERT" + i)
 
     if ($(this).find('.hero-video').length !== 0) {
-
-
    
       console.log("VIDEO BACKGROUND DETECTED")
-      // let sectionOverlay = $('img[src$="-hero.jpg"]').parent();
 
-      // let sectionOverlay = $(this).parent().siblings('.siblings').find('.children').html(addTo);
+      let currVideo = $(this).find("video");
 
-      // console.log(heroParent);
+      console.log(currVideo)
 
-
-
-      // $(this).prepend(filmHero);
-      // let currVideo = $(this).find("video");
-      // let currImage = $(this).find("img");
 
       // $(currVideo).on({
       //   play: function () {

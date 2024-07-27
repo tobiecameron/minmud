@@ -48,7 +48,7 @@ function imageVideoswap() {
     let hero = src[src.length - 1];
     hero = hero.replace("jpg", "mp4");
 
-    let videoControl = "videoControl" + 1; 
+    let videoControl = "videoControl" + i; 
 
     let filmHero = '<video class="hero-video ' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 

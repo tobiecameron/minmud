@@ -65,7 +65,7 @@ function imageVideoswap() {
 
 
 // ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
-sectionVideoControls() {
+function sectionVideoControls() {
   // let i = 1;
 
   $(section - background).each(function (i, obj) {

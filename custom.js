@@ -73,15 +73,12 @@ function sectionVideoControls() {
   let i = 1;
 
   $(".section-background").each(function (i, obj) {
-    console.log("SECTION BACKGROUND ALERT" + i)
+    // console.log("SECTION BACKGROUND ALERT" + i)
 
     if ($(this).find('.hero-video').length !== 0) {
-   
       console.log("VIDEO BACKGROUND DETECTED")
-
       let currVideo = $(this).find("video");
-
-      console.log(currVideo)
+      console.log(currVideo);
 
 
       // $(currVideo).on({

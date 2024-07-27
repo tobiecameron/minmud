@@ -102,7 +102,7 @@ function sectionVideoControls() {
       //   }
       // });
     
-      var playButton = document.getElementById("thisplayControl");
+      var playButton = document.getElementById(thisplayControl);
       // Event listener for the play/pause button
       playButton.addEventListener("click", function() {
         if (currVideo.paused == true) {

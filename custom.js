@@ -27,8 +27,6 @@ $(document).ready(function () {
 let imageFilm = [];
 
 
-
-
 function imageVideoswap() {
   let heroParent = $('img[src$="-hero.jpg"]').parent();
   console.log(heroParent);
@@ -62,6 +60,7 @@ function imageVideoswap() {
 
 }
 
+/*
 
 // THE FOLLOWING MAY NOT BE NECCESARY WITH CHROME/SQUAREPACE BUILT IN PAUSE WHEN OUT OF FOCUS
 
@@ -96,3 +95,5 @@ setInterval(function() {
       }
   });
 }, 1000);
+
+*/

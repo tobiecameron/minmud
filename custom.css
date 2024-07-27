@@ -33,7 +33,7 @@
   bottom: 15px;
 }
 
-.playControl img {
+.playControl img:hover {
   cursor: pointer;
 }
 

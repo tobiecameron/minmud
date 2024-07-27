@@ -68,9 +68,11 @@ function imageVideoswap() {
 function sectionVideoControls() {
 
   console.log("RUNNING VIDEO BACKGROUND")
-  // let i = 1;
+  let i = 1;
 
   $(".section-background").each(function (i, obj) {
+    console.log("SECTION BACKGROUND ALERT" + i)
+
     if ($(this).hasClass('hero-video')) {
       console.log("VIDEO BACKGROUND DETECTED")
       // let sectionOverlay = $('img[src$="-hero.jpg"]').parent();
@@ -91,9 +93,8 @@ function sectionVideoControls() {
       //   }
       // });
     }
+    i++
   });
-
-
 }
 
 

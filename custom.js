@@ -94,7 +94,7 @@ function sectionVideoControls() {
       var playButton = document.getElementById(thisplayControl);
       var videotoControl = 'videoControl' + x;
 
-      var videoSrc = videotoControl.attr('src', _src);
+      var videoSrc.src = _src;
       // Event listener for the play/pause button
       playButton.addEventListener("click", function() {
 

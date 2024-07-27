@@ -69,16 +69,19 @@ function imageVideoswap() {
 // ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
 function sectionVideoControls() {
 
-  console.log("RUNNING VIDEO BACKGROUND")
   let i = 1;
 
   $(".section-background").each(function (i, obj) {
-    // console.log("SECTION BACKGROUND ALERT" + i)
 
     if ($(this).find('.hero-video').length !== 0) {
       console.log("VIDEO BACKGROUND DETECTED")
       let currVideo = $(this).find("video");
       console.log(currVideo);
+      let overlayDiv = $(this).parent().children().first();
+      console.log(overlayDiv);
+
+      // let filmHero = '<video class="hero-video" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
+
 
 
       // $(currVideo).on({
@@ -86,26 +89,34 @@ function sectionVideoControls() {
       //     gsap.to(currImage, .5, { opacity: 0 });
       //   }
       // });
+    
+
+
+
+
+      // var playButton = document.getElementById("play_button");
+      // // Event listener for the play/pause button
+      // playButton.addEventListener("click", function() {
+      //   if (video.paused == true) {
+      //     // Play the video
+      //     video.play();
+      
+      //     // Update the button text to 'Pause'
+      //     playButton.innerHTML = "Pause";
+      //   } else {
+      //     // Pause the video
+      //     video.pause();
+      
+      //     // Update the button text to 'Play'
+      //     playButton.innerHTML = "Play";
+      //   }
+      // });
+
+
     }
     i++
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

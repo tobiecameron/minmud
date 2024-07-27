@@ -12,7 +12,7 @@ $(document).ready(function () {
 
   if ( window.frameElement == null ) {
     imageVideoswap();
-
+    sectionVideoControls()
   }
 
 });
@@ -21,7 +21,6 @@ $(document).ready(function () {
 // window.onload = function () {
 //     imageVideoswap();
 // };
-
 
 
 // Creaet an array for all film objects to be added
@@ -64,6 +63,36 @@ function imageVideoswap() {
 }
 
 
+
+// ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
+sectionVideoControls() {
+  // let i = 1;
+
+  $(section - background).each(function (i, obj) {
+    if ($(this).hasClass('hero-video')) {
+      console.log("VIDEO BACKGROUND DETECTED")
+      // let sectionOverlay = $('img[src$="-hero.jpg"]').parent();
+
+      // let sectionOverlay = $(this).parent().siblings('.siblings').find('.children').html(addTo);
+
+      // console.log(heroParent);
+
+
+
+      // $(this).prepend(filmHero);
+      // let currVideo = $(this).find("video");
+      // let currImage = $(this).find("img");
+
+      // $(currVideo).on({
+      //   play: function () {
+      //     gsap.to(currImage, .5, { opacity: 0 });
+      //   }
+      // });
+    }
+  });
+
+
+}
 
 
 

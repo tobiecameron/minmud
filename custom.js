@@ -74,13 +74,13 @@ function imageVideoswap() {
 // ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
 function sectionVideoControls() {
 
-  let i = 0;
+  let x = 0;
 
   $(".section-background").each(function (i, obj) {
 
     if ($(this).find('.hero-video').length !== 0) {
 
-      i++
+      x++
       console.log("VIDEO BACKGROUND DETECTED")
       let currVideo = $(this).find("video");
       console.log(currVideo);
@@ -88,7 +88,7 @@ function sectionVideoControls() {
       let overlayDiv = $(this).parent().siblings().first().find(".content");
       console.log(overlayDiv);
 
-      let thisplayControl = "play" + i;
+      let thisplayControl = "play" + x;
 
       $(overlayDiv).append('<img class="playControl ' + thisplayControl + '" src="https://minmud.vercel.app/controls/play.svg">');
 

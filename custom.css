@@ -35,6 +35,8 @@
 
 .playControl img:hover {
   cursor: pointer;
+  height: 100%;
+  width: auto;
 }
 
 

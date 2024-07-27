@@ -25,6 +25,16 @@
     }
 
 } 
+
+.playControl {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 10px;
+}
+
+
+
     /* opacity: 0; */
 /* 
 .slide .image-slide-title {

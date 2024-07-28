@@ -32,7 +32,9 @@ $(document).ready(function () {
 let imageFilm = [];
 
 function imageVideoswap() {
-  let heroParent = $('img[data-image$="-hero.jpg"]').parent();
+  let heroParent = $('img[data-image$="-hero.jpg"]');
+  // let heroParent = $('img[data-image$="-hero.jpg"]').parent();
+
   // let heroGallery = $('img[data-image$="-hero.jpg"]').parent();
 
 
@@ -45,33 +47,31 @@ function imageVideoswap() {
     i++;
 
     //replace the source jpg with the MP4 hosted on Vercel via GIT
-    let src = $(this).find("img").attr("src")
-    // .split("/");
-
+    let src = $(this).find("img").attr("src").split("/");
 
     console.log(src);
-    // // let Filename = src.pop();
-    // // console.log(Filename);
+    // let Filename = src.pop();
+    // console.log(Filename);
 
-    // let hero = src[src.length - 1];
-    // hero = hero.replace("jpg", "mp4");
+    let hero = src[src.length - 1];
+    hero = hero.replace("jpg", "mp4");
 
-    // let videoControl = "videoControl" + i; 
+    let videoControl = "videoControl" + i; 
 
-    // let filmHero = '<video id="'+ videoControl +'" class="hero-video ' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
+    let filmHero = '<video id="'+ videoControl +'" class="hero-video ' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 
-    // // let filmHero = '<video class="hero-video" controls="false" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
+    // let filmHero = '<video class="hero-video" controls="false" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 
-    // // add video to the source images parent div
-    // $(this).prepend(filmHero);
-    // let currVideo = $(this).find("video");
-    // let currImage = $(this).find("img");
+    // add video to the source images parent div
+    $(this).prepend(filmHero);
+    let currVideo = $(this).find("video");
+    let currImage = $(this).find("img");
 
-    // $(currVideo).on({
-    //   play: function() {
-    //     gsap.to(currImage, .5, { opacity: 0});
-    //   }
-    // });
+    $(currVideo).on({
+      play: function() {
+        gsap.to(currImage, .5, { opacity: 0});
+      }
+    });
 
   });
 

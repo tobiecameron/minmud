@@ -81,8 +81,14 @@ function sectionVideoControls() {
     if ($(this).find('.hero-video').length !== 0) {
       x++
       console.log("VIDEO BACKGROUND DETECTED")
-      let overlayDiv = $(this).parent().siblings().first().find(".content");
+      //  define the overlay elements
+      let overlayDiv = $(this).parent().siblings().first();
+      let overlayDivContent = $(this).parent().siblings().first().find(".content");
+
+
       let thisplayControl = "play" + x;
+      let thisoverlayDivContent = overlayDivContent + x;
+
       $(overlayDiv).append('<img id="'+ thisplayControl +'" class="playControl ' + thisplayControl + '" src="https://minmud.vercel.app/controls/play.svg">');
 
       var playButton = document.getElementById(thisplayControl);
@@ -93,25 +99,25 @@ function sectionVideoControls() {
       // console.log(videotoControl);
 
       // Event listener for the play/pause button
+
       playButton.addEventListener("click", function() {
-        if (vid.paused == true) {
+        if (vid.paused == false) {
+          // Reveal the video
+          vid.muted = false;
+          gsap.to(thisoverlayDivContent, .5, { opacity: 0});
+          // Update the button text to 'Pause'
+          playButton.innerHTML = "Revealed";
+        }
+        
+        if (vid.paused == false) {
           // Play the video
           vid.play();
-          vid.muted = false;
-
-      
-          // Update the button text to 'Pause'
-          playButton.innerHTML = "Pause";
-        } else {
-          // Pause the video
-          vid.pause();
-          vid.muted = true;
-
-      
+          vid.muted = false;      
           // Update the button text to 'Play'
           playButton.innerHTML = "Play";
-          
         }
+
+
       });
 
 

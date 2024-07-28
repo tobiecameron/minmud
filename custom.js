@@ -84,6 +84,7 @@ function sectionVideoControls() {
       //  define the overlay elements
       let overlayDiv = $(this).parent().siblings().first();
       let overlayDivContent = $(this).parent().siblings().first().find(".content");
+      let thisOverlay = $(this).find(".section-background-overlay");
 
       console.log(overlayDivContent);
 
@@ -102,7 +103,7 @@ function sectionVideoControls() {
         if (vid.paused == false) {
           // Reveal the video
           vid.muted = false;
-          gsap.to(overlayDivContent, .5, { opacity: 0});
+          gsap.to(overlayDivContent, thisOverlay, .5, { opacity: 0});
         }
       });
 

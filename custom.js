@@ -93,8 +93,13 @@ function sectionVideoControls() {
 
       console.log(thisoverlayDivContent);
 
-      $(overlayDiv).append('<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg">');
-      gsap.to('.' + thisshowControl, .25, { opacity: .8, delay: 1});
+      $(overlayDiv).append(
+        '<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg"><img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/hide.svg">'
+      );
+      
+      
+      
+        gsap.to('.' + thisshowControl, .25, { opacity: .8, delay: 1});
 
       var showButton = document.getElementById(thisshowControl);
       var vid = document.getElementById('videoControl' + x);
@@ -104,7 +109,6 @@ function sectionVideoControls() {
           // Reveal the video
           vid.muted = false;
           gsap.to([overlayDivContent, thisOverlay, thisshowControl], .5, { opacity: 0});
-
         }
       });
 

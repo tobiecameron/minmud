@@ -97,7 +97,7 @@ function sectionVideoControls() {
 
       // Event listener for the play/pause button
 
-      gsap.to(thisshowControl, .25, { opacity: 1, delay: 1});
+      gsap.to('.' + thisshowControl, .25, { opacity: 1, delay: 1});
 
       showButton.addEventListener("click", function() {
         if (vid.paused == false) {

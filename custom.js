@@ -91,6 +91,8 @@ function sectionVideoControls() {
 
       $(overlayDiv).append('<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg">');
 
+      gsap.to(thisshowControl, .25, { opacity: 1});
+
       var showButton = document.getElementById(thisshowControl);
       // var videoto = ('videoControl' + x);
 

@@ -31,6 +31,8 @@
   width: 100%;
   height: 20px;
   bottom: 15px;
+  opacity: 0;
+
 }
 
 .showControl img:hover {

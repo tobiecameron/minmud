@@ -14,7 +14,7 @@ $(document).ready(function () {
     imageVideoswap();
     // sectionVideoControls()
 
-    setTimeout(sectionVideoControls,2000)
+    setTimeout(sectionVideoControls,300)
   }
 
 });

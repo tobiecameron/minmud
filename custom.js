@@ -44,10 +44,10 @@ function imageVideoswap() {
   $(heroParent).each(function (i, obj) {
     i++;
 
-    let heroImage = $(heroParent).children().first();
-
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     let src = $(this).find("img").attr("src").split("/");
+
+    console.log(src);
     // let Filename = src.pop();
     // console.log(Filename);
 

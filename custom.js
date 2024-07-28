@@ -97,7 +97,7 @@ function sectionVideoControls() {
       console.log(thisoverlayDivContent);
 
       $(overlayDiv).append(
-        '<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg"><img id="'+ thishideControl +'" class="showControl ' + thishideControl + '" src="https://minmud.vercel.app/controls/hide.svg">'
+        '<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg"><img id="'+ thishideControl +'" class="hideControl ' + thishideControl + '" src="https://minmud.vercel.app/controls/hide.svg">'
       );
       
       gsap.to('.' + thisshowControl, .25, { opacity: .8, delay: 1});

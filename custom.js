@@ -48,7 +48,8 @@ function imageVideoswap() {
     let src = $(this).find("img").attr("src")
     // .split("/");
 
-    // console.log(src);
+
+    console.log(src);
     // // let Filename = src.pop();
     // // console.log(Filename);
 

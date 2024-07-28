@@ -103,6 +103,7 @@ function sectionVideoControls() {
       gsap.to('.' + thisshowControl, .25, { opacity: .8, display:"block", delay: 1});
 
       var showButton = document.getElementById(thisshowControl);
+      var hideButton = document.getElementById(thishideControl);
       var vid = document.getElementById('videoControl' + x);
 
       showButton.addEventListener("click", function() {
@@ -111,7 +112,18 @@ function sectionVideoControls() {
           vid.muted = false;
           gsap.to([overlayDivContent, thisOverlay], .5, { opacity: 0, display:"none"});
           gsap.to("." + thisshowControl, .5, { opacity: 0, display:"none"});
-          gsap.to("." + thishideControl, .5, { opacity: 1, display:"block", delay: .5});
+          gsap.to("." + thishideControl, .5, { opacity: .8, display:"block", delay: .5});
+        }
+      });
+
+
+      hideButton.addEventListener("click", function() {
+        if (vid.paused == false) {
+          // Reveal the video
+          vid.muted = true;
+          gsap.to([overlayDivContent, thisOverlay], .5, { opacity: 1, display:"block"});
+          gsap.to("." + thishideControl, .5, { opacity: 0, display:"none"});
+          gsap.to("." + thisshowControl, .5, { opacity: .8, display:"block", delay: .5});
         }
       });
 

@@ -94,22 +94,19 @@ function sectionVideoControls() {
 
       // Event listener for the play/pause button
       playButton.addEventListener("click", function() {
-
-        vid.pause();
-
-        // if (currVideo.paused == true) {
-        //   // Play the video
-        //   currVideo.play();
+        if (vid.paused == true) {
+          // Play the video
+          vid.play();
       
-        //   // Update the button text to 'Pause'
-        //   playButton.innerHTML = "Pause";
-        // } else {
-        //   // Pause the video
-        //   currVideo.pause();
+          // Update the button text to 'Pause'
+          playButton.innerHTML = "Pause";
+        } else {
+          // Pause the video
+          vid.pause();
       
-        //   // Update the button text to 'Play'
-        //   playButton.innerHTML = "Play";
-        // }
+          // Update the button text to 'Play'
+          playButton.innerHTML = "Play";
+        }
       });
 
 

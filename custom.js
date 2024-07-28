@@ -91,16 +91,13 @@ function sectionVideoControls() {
 
       $(overlayDiv).append('<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg">');
 
-      gsap.to(thisshowControl, .25, { opacity: 1}, .5);
 
       var showButton = document.getElementById(thisshowControl);
-      // var videoto = ('videoControl' + x);
-
       var vid = document.getElementById('videoControl' + x);
-      // var videotoControl = videoto.get(0);
-      // console.log(videotoControl);
 
       // Event listener for the play/pause button
+
+      gsap.to(thisshowControl, .25, { opacity: 1, delay: 1});
 
       showButton.addEventListener("click", function() {
         if (vid.paused == false) {

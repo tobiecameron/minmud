@@ -100,7 +100,7 @@ function sectionVideoControls() {
         '<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg"><img id="'+ thishideControl +'" class="hideControl ' + thishideControl + '" src="https://minmud.vercel.app/controls/hide.svg">'
       );
       
-      gsap.to('.' + thisshowControl, .25, { opacity: .8, delay: 1});
+      gsap.to('.' + thisshowControl, .25, { opacity: .8, display:"block", delay: 1});
 
       var showButton = document.getElementById(thisshowControl);
       var vid = document.getElementById('videoControl' + x);

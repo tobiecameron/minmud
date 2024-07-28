@@ -32,8 +32,11 @@
   height: 20px;
   bottom: 15px;
   opacity: 0;
+  display: none;
 
 }
+
+
 
 .showControl img:hover, .hideControl img:hover  {
   cursor: pointer;

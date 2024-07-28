@@ -45,6 +45,7 @@ function imageVideoswap() {
 
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     let src = $(this).find("img", "thumb-image" ).attr("src").split("/");
+    // comment here
 
     // let src = $(this).closest("img").attr("src").split("/");
     

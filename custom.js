@@ -32,9 +32,8 @@ $(document).ready(function () {
 let imageFilm = [];
 
 function imageVideoswap() {
-  let heroParent = $('img[data-image$="-hero.jpg"]');
-  // let heroParent = $('img[data-image$="-hero.jpg"]').parent();
-
+  let heroParent = $('img[data-image$="-hero.jpg"]').parent();
+  
   // let heroGallery = $('img[data-image$="-hero.jpg"]').parent();
 
 

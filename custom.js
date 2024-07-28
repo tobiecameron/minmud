@@ -89,6 +89,8 @@ function sectionVideoControls() {
       let thisshowControl = "show" + x;
       let thisoverlayDivContent = overlayDivContent + x;
 
+      console.log(thisoverlayDivContent);
+
       $(overlayDiv).append('<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg">');
 
 
@@ -103,23 +105,24 @@ function sectionVideoControls() {
         if (vid.paused == false) {
           // Reveal the video
           vid.muted = false;
-          gsap.to(thisoverlayDivContent, .5, { opacity: 0});
-          // Update the button text to 'Pause'
-          // playButton.innerHTML = "Revealed";
+          // gsap.to(thisoverlayDivContent, .5, { opacity: 0});
         }
-        
-        if (vid.paused == false) {
-          // Play the video
-          vid.play();
-          vid.muted = false;      
-          // Update the button text to 'Play'
-          // playButton.innerHTML = "Play";
-        }
-
-
       });
 
 
+      // showButton.addEventListener("click", function() {
+      //   if (vid.paused == false) {
+      //     // Reveal the video
+      //     vid.muted = false;
+      //     gsap.to(thisoverlayDivContent, .5, { opacity: 0});
+      //   }
+        
+      //   if (vid.muted == false) {
+      //     // Play the video
+      //     vid.play();
+      //     vid.muted = false;      
+      //   }
+      // });
     }
 
   });

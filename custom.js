@@ -45,7 +45,8 @@ function imageVideoswap() {
     i++;
 
     //replace the source jpg with the MP4 hosted on Vercel via GIT
-    let src = $(this).find("img").attr("src")
+    let src = $(this).find("img")
+    // .attr("src")
     // .split("/");
     console.log(src);
     // let Filename = src.pop();
@@ -126,7 +127,7 @@ function sectionVideoControls() {
           vid.muted = false;
           gsap.to([overlayDivContent, thisOverlay], .25, { opacity: 0, display:"none"});
           gsap.to("." + thisshowControl, .25, { opacity: 0, display:"none"});
-          gsap.to("." + thishideControl, .25, { opacity: .7, display:"block", delay: .5});
+          gsap.to("." + thishideControl, .25, { opacity: .7, display:"block", delay: .25});
         }
       });
 
@@ -137,7 +138,7 @@ function sectionVideoControls() {
           gsap.to(thisOverlay, .25, { opacity: .55, display:"block"});
           gsap.to(overlayDivContent, .25, { opacity: 1, display:"block"});
           gsap.to("." + thishideControl, .25, { opacity: 0, display:"none"});
-          gsap.to("." + thisshowControl, .25, { opacity: .7, display:"block", delay: .5});
+          gsap.to("." + thisshowControl, .25, { opacity: .7, display:"block", delay: .25});
         }
       });
 

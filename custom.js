@@ -32,7 +32,7 @@ $(document).ready(function () {
 let imageFilm = [];
 
 function imageVideoswap() {
-  let heroParent = $('img[data-image$="-hero.jpg"]').parent();
+  let heroParent = $('img[src$="-hero.jpg"]').parent();
   
   // let heroGallery = $('img[data-image$="-hero.jpg"]').parent();
 
@@ -45,7 +45,7 @@ function imageVideoswap() {
     i++;
 
     //replace the source jpg with the MP4 hosted on Vercel via GIT
-    let src = $(this).find("img" || "img.thumb-image.loaded").attr("src").split("/");
+    let src = $(this).find("img").attr("src").split("/");
     
     console.log(src);
     // let Filename = src.pop();

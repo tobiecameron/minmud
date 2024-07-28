@@ -47,7 +47,7 @@ function imageVideoswap() {
     // let src = $(this).find("img", "thumb-image" ).attr("src").split("/");
     // comment here
 
-    let src = $(this).closest("img").attr("src").split("/");
+    let src = $(this).find("img").attr("src").split("/");
     
     console.log(src);
    

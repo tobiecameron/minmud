@@ -103,7 +103,8 @@ function sectionVideoControls() {
         if (vid.paused == false) {
           // Reveal the video
           vid.muted = false;
-          gsap.to(overlayDivContent, thisOverlay, .5, { opacity: 0});
+          gsap.to([overlayDivContent, thisOverlay, thisshowControl], .5, { opacity: 0});
+
         }
       });
 

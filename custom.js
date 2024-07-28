@@ -31,7 +31,9 @@ let imageFilm = [];
 
 function imageVideoswap() {
   let heroParent = $('img[src$="-hero.jpg"]').parent();
+  let hero = $('img[src$="-hero.jpg"]');
   console.log(heroParent);
+  console.log(hero);
 
   let i = 0;
 

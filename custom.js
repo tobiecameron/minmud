@@ -110,7 +110,7 @@ function sectionVideoControls() {
           // Reveal the video
           vid.muted = false;
           gsap.to([overlayDivContent, thisOverlay, thisshowControl], .5, { opacity: 0, display:"none"});
-          gsap.to(thishideControl, .5, { opacity: 0, display:"block"});
+          gsap.to(thishideControl, .5, { opacity: 1, display:"block"});
         }
       });
 

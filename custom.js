@@ -100,7 +100,7 @@ function sectionVideoControls() {
         '<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg"><img id="'+ thishideControl +'" class="hideControl ' + thishideControl + '" src="https://minmud.vercel.app/controls/hide.svg">'
       );
       
-      gsap.to('.' + thisshowControl, .25, { opacity: .8, display:"block", delay: 1});
+      gsap.to('.' + thisshowControl, .25, { opacity: .7, display:"block", delay: 1});
 
       var showButton = document.getElementById(thisshowControl);
       var hideButton = document.getElementById(thishideControl);
@@ -114,7 +114,7 @@ function sectionVideoControls() {
           vid.muted = false;
           gsap.to([overlayDivContent, thisOverlay], .5, { opacity: 0, display:"none"});
           gsap.to("." + thisshowControl, .5, { opacity: 0, display:"none"});
-          gsap.to("." + thishideControl, .5, { opacity: .8, display:"block", delay: .5});
+          gsap.to("." + thishideControl, .5, { opacity: .7, display:"block", delay: .5});
         }
       });
 
@@ -124,7 +124,7 @@ function sectionVideoControls() {
           vid.muted = true;
           gsap.to([overlayDivContent, thisOverlay], .5, { opacity: 1, display:"block"});
           gsap.to("." + thishideControl, .5, { opacity: 0, display:"none"});
-          gsap.to("." + thisshowControl, .5, { opacity: .8, display:"block", delay: .5});
+          gsap.to("." + thisshowControl, .5, { opacity: .7, display:"block", delay: .5});
         }
       });
 

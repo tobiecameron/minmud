@@ -86,12 +86,12 @@ function sectionVideoControls() {
       let overlayDivContent = $(this).parent().siblings().first().find(".content");
 
 
-      let thisplayControl = "play" + x;
+      let thisshowControl = "show" + x;
       let thisoverlayDivContent = overlayDivContent + x;
 
-      $(overlayDiv).append('<img id="'+ thisplayControl +'" class="playControl ' + thisplayControl + '" src="https://minmud.vercel.app/controls/play.svg">');
+      $(overlayDiv).append('<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg">');
 
-      var playButton = document.getElementById(thisplayControl);
+      var showButton = document.getElementById(thisshowControl);
       // var videoto = ('videoControl' + x);
 
       var vid = document.getElementById('videoControl' + x);
@@ -100,13 +100,13 @@ function sectionVideoControls() {
 
       // Event listener for the play/pause button
 
-      playButton.addEventListener("click", function() {
+      showButton.addEventListener("click", function() {
         if (vid.paused == false) {
           // Reveal the video
           vid.muted = false;
           gsap.to(thisoverlayDivContent, .5, { opacity: 0});
           // Update the button text to 'Pause'
-          playButton.innerHTML = "Revealed";
+          // playButton.innerHTML = "Revealed";
         }
         
         if (vid.paused == false) {
@@ -114,7 +114,7 @@ function sectionVideoControls() {
           vid.play();
           vid.muted = false;      
           // Update the button text to 'Play'
-          playButton.innerHTML = "Play";
+          // playButton.innerHTML = "Play";
         }
 
 

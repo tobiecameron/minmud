@@ -97,15 +97,20 @@ function sectionVideoControls() {
         if (vid.paused == true) {
           // Play the video
           vid.play();
+          vid.muted = false;
+
       
           // Update the button text to 'Pause'
           playButton.innerHTML = "Pause";
         } else {
           // Pause the video
           vid.pause();
+          vid.muted = true;
+
       
           // Update the button text to 'Play'
           playButton.innerHTML = "Play";
+          
         }
       });
 

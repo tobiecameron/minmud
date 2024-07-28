@@ -105,12 +105,18 @@ function sectionVideoControls() {
       var showButton = document.getElementById(thisshowControl);
       var hideButton = document.getElementById(thishideControl);
       var vid = document.getElementById('videoControl' + x);
-      var allVids = document.getElementById('video');
+      // var allVids = document.getElementById('video');
 
       showButton.addEventListener("click", function() {
         if (vid.paused == false) {
           // Reveal the video
-          allVids.muted = true;
+     
+          $('body video').each(function(){
+            /*** Do it here globally ***/
+            $(this).prop('muted', true);
+         });
+
+
           vid.muted = false;
           gsap.to([overlayDivContent, thisOverlay], .5, { opacity: 0, display:"none"});
           gsap.to("." + thisshowControl, .5, { opacity: 0, display:"none"});

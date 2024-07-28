@@ -120,9 +120,9 @@ function sectionVideoControls() {
 
 
           vid.muted = false;
-          gsap.to([overlayDivContent, thisOverlay], .5, { opacity: 0, display:"none"});
-          gsap.to("." + thisshowControl, .5, { opacity: 0, display:"none"});
-          gsap.to("." + thishideControl, .5, { opacity: .7, display:"block", delay: .5});
+          gsap.to([overlayDivContent, thisOverlay], .25, { opacity: 0, display:"none"});
+          gsap.to("." + thisshowControl, .25, { opacity: 0, display:"none"});
+          gsap.to("." + thishideControl, .25, { opacity: .7, display:"block", delay: .5});
         }
       });
 
@@ -130,10 +130,10 @@ function sectionVideoControls() {
         if (vid.paused == false) {
           // Reveal the video
           vid.muted = true;
-          gsap.to(thisOverlay, .5, { opacity: .55, display:"block"});
-          gsap.to(overlayDivContent, .5, { opacity: 1, display:"block"});
-          gsap.to("." + thishideControl, .5, { opacity: 0, display:"none"});
-          gsap.to("." + thisshowControl, .5, { opacity: .7, display:"block", delay: .5});
+          gsap.to(thisOverlay, .25, { opacity: .55, display:"block"});
+          gsap.to(overlayDivContent, .25, { opacity: 1, display:"block"});
+          gsap.to("." + thishideControl, .25, { opacity: 0, display:"none"});
+          gsap.to("." + thisshowControl, .25, { opacity: .7, display:"block", delay: .5});
         }
       });
 

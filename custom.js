@@ -27,15 +27,17 @@ $(document).ready(function () {
 // };
 
 
+
 // Creaet an array for all film objects to be added
 let imageFilm = [];
 
-
 function imageVideoswap() {
   let heroParent = $('img[src$="-hero.jpg"]').parent();
-  let hero = $('img[src$="-hero.jpg"]');
+  let heroGallery = $('img[data-image$="-hero.jpg"]').parent();
+
+
   console.log(heroParent);
-  console.log(hero);
+  console.log(heroGallery);
 
   let i = 0;
 

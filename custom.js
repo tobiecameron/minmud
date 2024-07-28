@@ -127,7 +127,7 @@ function sectionVideoControls() {
 
 
           vid.muted = false;
-          gsap.to([overlayDivContent, thisOverlay], .25, { opacity: 0, display:"none"});
+          gsap.to([overlayDivContent, thisOverlay], .25, { opacity: 0});
           gsap.to("." + thisshowControl, .25, { opacity: 0, display:"none"});
           gsap.to("." + thishideControl, .25, { opacity: .7, display:"block", delay: .25});
         }
@@ -137,8 +137,8 @@ function sectionVideoControls() {
         if (vid.paused == false) {
           // Reveal the video
           vid.muted = true;
-          gsap.to(thisOverlay, .25, { opacity: .55, display:"block"});
-          gsap.to(overlayDivContent, .25, { opacity: 1, display:"block"});
+          gsap.to(thisOverlay, .25, { opacity: .55});
+          gsap.to(overlayDivContent, .25, { opacity: 1});
           gsap.to("." + thishideControl, .25, { opacity: 0, display:"none"});
           gsap.to("." + thisshowControl, .25, { opacity: .7, display:"block", delay: .25});
         }

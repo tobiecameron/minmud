@@ -13,10 +13,10 @@ $(document).ready(function () {
   if ( window.frameElement == null ) {
     // imageVideoswap();
 
-    setTimeout(imageVideoswap,1000)
+    setTimeout(imageVideoswap,0)
     // sectionVideoControls()
 
-    setTimeout(sectionVideoControls,1500)
+    setTimeout(sectionVideoControls,300)
   }
 
 });

@@ -32,12 +32,12 @@ $(document).ready(function () {
 let imageFilm = [];
 
 function imageVideoswap() {
-  let heroParent = $('img[src$="-hero.jpg"]').parent();
-  let heroGallery = $('img[data-image$="-hero.jpg"]').parent();
+  let heroParent = $('img[data-image$="-hero.jpg"]').parent();
+  // let heroGallery = $('img[data-image$="-hero.jpg"]').parent();
 
 
   console.log(heroParent);
-  console.log(heroGallery);
+  // console.log(heroGallery);
 
   let i = 0;
 

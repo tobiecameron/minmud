@@ -58,6 +58,7 @@
   position: absolute;
     display: flex;
     height: 100%;
+    width: 101% !important;
     background-color: #0000008c;
     /* color: #fff; */
     justify-content: center;
@@ -71,7 +72,7 @@
 
 .galleryButton {
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
 }
 
 

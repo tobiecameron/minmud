@@ -57,11 +57,16 @@ function imageVideoswap() {
     let currVideo = $(this).find("video");
     let currImage = $(this).find("img");
 
+    if($(this).is(':contains("href")')) {
+      $(this).parents().find('margin-wrapper').addClass('galleryFilm');
+    } 
+
+
     console.log(currImage);
 
     $(currVideo).on({
       play: function() {
-        $(this).currImage.removeClass('loaded');
+        $(this).children().removeClass('loaded');
         gsap.to(currImage, .5, { opacity: 0});
         // gsap.to(currImage, .5, { display: "none"});
       }

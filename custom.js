@@ -57,7 +57,7 @@ function imageVideoswap() {
     let currVideo = $(this).find("video");
     let currImage = $(this).find("img");
 
-    if($(this).is(':contains("href")')) {
+    if($(this).parents(':contains("href")')) {
       console.log("contains HREF")
       $(this).parents().find('margin-wrapper').addClass('galleryFilm');
     } 

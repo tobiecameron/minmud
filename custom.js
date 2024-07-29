@@ -66,9 +66,9 @@ function imageVideoswap() {
 
     $(currVideo).on({
       play: function() {
-        $(this).children().removeClass('loaded');
-        gsap.to(currImage, .5, { opacity: 0});
-        // gsap.to(currImage, .5, { display: "none"});
+        // $(this).children().removeClass('loaded');
+        // gsap.to(currImage, .5, { opacity: 0});
+        gsap.to(currImage, .5, { display: "none"});
       }
     });
 

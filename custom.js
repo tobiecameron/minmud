@@ -35,7 +35,7 @@ function imageVideoswap() {
   // let heroParent = $('img[src$="-hero.jpg"]').parent();
   let heroParent = $('img[data-image$="-hero.jpg"]').parent();
 
-  console.log(heroParent);
+  // console.log(heroParent);
   // console.log(heroGallery);
 
   let i = 0;
@@ -44,7 +44,7 @@ function imageVideoswap() {
     i++;
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     let src = $(this).find("img").attr("data-src").split("/");
-    console.log(src);
+    // console.log(src);
    
     let hero = src[src.length - 1];
     hero = hero.replace("jpg", "mp4");
@@ -70,7 +70,7 @@ function imageVideoswap() {
     }
     /////////////* end gallery vlocks */
 
-    console.log(currImage);
+    // console.log(currImage);
 
     $(currVideo).on({
       play: function() {
@@ -101,7 +101,7 @@ function sectionVideoControls() {
       let overlayDivContent = $(this).parent().siblings().first().find(".content");
       let thisOverlay = $(this).find(".section-background-overlay");
 
-      console.log(overlayDivContent);
+      // console.log(overlayDivContent);
 
       let thisshowControl = "show" + x;
       let thishideControl = "hide" + x;

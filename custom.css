@@ -47,8 +47,16 @@
 
 /* Gallery blocks */
 
-.image-slide-title {
+.galleryFilm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.galleryFilm .image-slide-title {
   position: relative;
+  
 }
 
 

@@ -61,7 +61,7 @@ function imageVideoswap() {
 
     $(currVideo).on({
       play: function() {
-        $(this).removeClass('loaded');
+        $(this).currImage.removeClass('loaded');
         gsap.to(currImage, .5, { opacity: 0});
         // gsap.to(currImage, .5, { display: "none"});
       }

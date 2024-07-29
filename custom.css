@@ -65,6 +65,7 @@
     flex-direction: column;
     margin-top: 0em !important;
     font-size: 1.3rem !important;
+    cursor: pointer;
 }
 
 

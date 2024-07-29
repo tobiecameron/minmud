@@ -58,7 +58,7 @@ function imageVideoswap() {
     let currImage = $(this).find("img");
 
     if ($(this).parent().hasClass('margin-wrapper')){
-        $(this).parents().addClass('galleryFilm');  //your function
+        $(this).parent().closest('div').addClass('galleryFilm');  //your function
     }
 
 

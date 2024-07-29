@@ -99,12 +99,18 @@ function sectionVideoControls() {
       console.log("VIDEO BACKGROUND DETECTED")
       //  define the overlay elements
 
-      /* For sections wiht background images */
-      if ($(this).parent().hasClass('section-background')){
 
-      let overlayDiv = $(this).parent().siblings().first();
-      let overlayDivContent = $(this).parent().siblings().first().find(".content");
-      let thisOverlay = $(this).find(".section-background-overlay");
+      var overlayDiv;
+      var overlayDivContent;
+      var thisOverlay;
+
+
+      /* For sections wiht background images */
+      if ($(this).parent().hasClass('section-background')) {
+
+        overlayDiv = $(this).parent().siblings().first();
+        overlayDivContent = $(this).parent().siblings().first().find(".content");
+        thisOverlay = $(this).find(".section-background-overlay");
       }
 
       let thisshowControl = "show" + x;

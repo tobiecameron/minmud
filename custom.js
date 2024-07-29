@@ -58,6 +58,7 @@ function imageVideoswap() {
     let currImage = $(this).find("img");
 
     if($(this).is(':contains("href")')) {
+      console.log("contains HREF")
       $(this).parents().find('margin-wrapper').addClass('galleryFilm');
     } 
 
@@ -66,7 +67,7 @@ function imageVideoswap() {
 
     $(currVideo).on({
       play: function() {
-        // $(this).children().removeClass('loaded');
+        $(currImage).removeClass('loaded');
         // gsap.to(currImage, .5, { opacity: 0});
         gsap.to(currImage, .5, { display: "none"});
       }

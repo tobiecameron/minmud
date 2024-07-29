@@ -98,19 +98,19 @@ function sectionVideoControls() {
       x++
       console.log("VIDEO BACKGROUND DETECTED")
       //  define the overlay elements
+
+      /* For sections wiht background images */
+      if ($(this).parent().hasClass('section-background')){
+
       let overlayDiv = $(this).parent().siblings().first();
       let overlayDivContent = $(this).parent().siblings().first().find(".content");
       let thisOverlay = $(this).find(".section-background-overlay");
-
-      // console.log(overlayDivContent);
+      }
 
       let thisshowControl = "show" + x;
       let thishideControl = "hide" + x;
-      
 
       let thisoverlayDivContent = overlayDivContent + x;
-
-      console.log(thisoverlayDivContent);
 
       $(overlayDiv).append(
         '<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg"><img id="'+ thishideControl +'" class="hideControl ' + thishideControl + '" src="https://minmud.vercel.app/controls/hide.svg">'

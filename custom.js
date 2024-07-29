@@ -89,21 +89,17 @@ function imageVideoswap() {
 
 // ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
 function sectionVideoControls() {
-
   let x = 0;
 
   $(".section-background").each(function (i, obj) {
-
     if ($(this).find('.hero-video').length !== 0) {
       x++
       console.log("VIDEO BACKGROUND DETECTED")
       //  define the overlay elements
 
-
       var overlayDiv;
       var overlayDivContent;
       var thisOverlay;
-
 
       /* For sections wiht B A C K G R O U N D  images */
       // if ($(this).parent().hasClass('section-background')) {
@@ -112,19 +108,15 @@ function sectionVideoControls() {
         thisOverlay = $(this).find(".section-background-overlay");
       // }
 
-
       /* For gallery blocks with images */
       // if ($(this).parent().hasClass('margin-wrapper')){
         // overlayDiv = $(this).parent().siblings().first();
         // overlayDivContent = $(this).parent().siblings().first().find(".content");
         // thisOverlay = $(this).find(".section-background-overlay");
       // }
-
-
-
       let thisshowControl = "show" + x;
       let thishideControl = "hide" + x;
-
+      
       let thisoverlayDivContent = overlayDivContent + x;
 
       $(overlayDiv).append(
@@ -141,13 +133,10 @@ function sectionVideoControls() {
       showButton.addEventListener("click", function() {
         if (vid.paused == false) {
           // Reveal the video
-     
           $('body video').each(function(){
             /*** Do it here globally ***/
             $(this).prop('muted', true);
          });
-
-
           vid.muted = false;
           gsap.to([overlayDivContent, thisOverlay], .25, { opacity: 0});
           gsap.to("." + thisshowControl, .25, { opacity: 0, display:"none"});
@@ -166,7 +155,6 @@ function sectionVideoControls() {
         }
       });
 
-
       // showButton.addEventListener("click", function() {
       //   if (vid.paused == false) {
       //     // Reveal the video
@@ -181,7 +169,6 @@ function sectionVideoControls() {
       //   }
       // });
     }
-
   });
 }
 

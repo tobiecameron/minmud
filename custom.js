@@ -70,7 +70,7 @@ function imageVideoswap() {
         
         // add video to the source images parent div
         $(this).append(thisBackground);
-        $(this).parent().closest('div').append(thisButton);
+        $(this).parent().find('image-slide-title').append(thisButton);
         // $(this).append(thisButton);
     }
     /////////////* end gallery vlocks */

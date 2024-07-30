@@ -30,11 +30,14 @@ function imageVideoswap() {
   // console.log(heroParent);
   // console.log(heroGallery);
 
-  let i = 1;
-  let x = 1;
+  let i = 0;
+  let x = 0;
 
   $(heroParent).each(function (i, obj) {
-    i++;
+
+    let currVideo;
+    let currImage
+ 
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     let src = $(this).find("img").attr("data-src").split("/");
     // console.log(src);
@@ -42,21 +45,28 @@ function imageVideoswap() {
     let hero = src[src.length - 1];
     hero = hero.replace("jpg", "mp4");
 
-    let videoControl = "videoControl" + i; 
-    let filmHero = '<video id="'+ videoControl +'" class="hero-video ' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
-
-    // add video to the source images parent div
-    $(this).prepend(filmHero);
-    let currVideo = $(this).find("video");
-    let currImage = $(this).find("img");
 
 
+    if ($(this).parent().hasClass('section-background')) {
+      i++;
+
+      let videoControl = "videoControl" + i;
+      let filmHero = '<video id="' + videoControl + '" class="hero-video ' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
+
+      // add video to the source images parent div
+      $(this).prepend(filmHero);
+      currVideo = $(this).find("video");
+      currImage = $(this).find("img");
+    }
 
 
 
-    
+
+
     ////////////* For the Gallery blocks */
     if ($(this).parent().hasClass('margin-wrapper')){
+        x++;
+
         $(this).parent().closest('div').addClass('galleryFilm');  //your function
 
         let thisBackground = '<div class="gallery-overlay" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"></div>';

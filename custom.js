@@ -135,6 +135,7 @@ function sectionVideoControls() {
       // var allVids = document.getElementById('video');
 
       showButton.addEventListener("click", function() {
+        console.log("SHOW LISTENER ACTIVATE" + x);
         if (vid.paused == false) {
           // Reveal the video
           $('body video').each(function(){

@@ -7,18 +7,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 // Early JS calls
 $(document).ready(function () {
   console.log("------- M I N M U D 2beta");
-  // $('html, body').animate({scrollTop: $(window.location).top}, 0);
-  //   imageVideoswap();
 
   if ( window.frameElement == null ) {
-    // imageVideoswap();
-
     setTimeout(imageVideoswap,0)
-    // sectionVideoControls()
-
-    setTimeout(sectionVideoControls,300)
   }
-
 });
 
 // After DOM Calls
@@ -86,6 +78,7 @@ function imageVideoswap() {
     });
 
   });
+  setTimeout(sectionVideoControls,250)
 
 }
 

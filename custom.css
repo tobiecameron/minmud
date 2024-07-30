@@ -77,8 +77,8 @@
   top: 50%;
   height: auto;
   width: 101% !important;
-  cursor: pointer;
-  pointer-events: none;
+  /* cursor: pointer;
+  pointer-events: none; */
 }
 
 .galleryButton {

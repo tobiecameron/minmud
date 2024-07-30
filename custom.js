@@ -28,7 +28,7 @@ function imageSectionvideoswap() {
 
   $(heroParent).each(function (i, obj) {
 
-    if ($(this).parent().hasClass('section-background')) {
+    if ($(this).hasClass('section-background')) {
 
       i++;
       //replace the source jpg with the MP4 hosted on Vercel via GIT

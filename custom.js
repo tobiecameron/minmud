@@ -31,9 +31,10 @@ function imageVideoswap() {
   // console.log(heroGallery);
 
   let i = 0;
+  let x = 0;
 
   $(heroParent).each(function (i, obj) {
-    i++;
+ 
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     let src = $(this).find("img").attr("data-src").split("/");
     // console.log(src);
@@ -41,29 +42,39 @@ function imageVideoswap() {
     let hero = src[src.length - 1];
     hero = hero.replace("jpg", "mp4");
 
-    let videoControl = "videoControl" + i; 
-    let filmHero = '<video id="'+ videoControl +'" class="hero-video ' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
 
-    // add video to the source images parent div
-    $(this).prepend(filmHero);
-    let currVideo = $(this).find("video");
-    let currImage = $(this).find("img");
+
+    if ($(this).parent().hasClass('section-background')) {
+      i++;
+
+      let videoControl = "videoControl" + i;
+      let filmHero = '<video id="' + videoControl + '" class="hero-video ' + videoControl + '" muted autoplay playsinline="" preload="auto" loop="false" style="-webkit-border-radius: 1px; opacity: 1; object-fit: cover; object-position: 50% 50%;"><source id="videoMP4" src="https://minmud.vercel.app/film/' + hero + '" type="video/mp4"></video>';
+
+      // add video to the source images parent div
+      $(this).prepend(filmHero);
+      let currVideo = $(this).find("video");
+      let currImage = $(this).find("img");
+    }
+
+
 
     ////////////* For the Gallery blocks */
-    if ($(this).parent().hasClass('margin-wrapper')){
-        $(this).parent().closest('div').addClass('galleryFilm');  //your function
+    if ($(this).parent().hasClass('margin-wrapper')) {
+      x++;
 
-        let thisBackground = '<div class="gallery-overlay" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"></div>';
+      $(this).parent().closest('div').addClass('galleryFilm');  //your function
 
-        let thisLink = $(this).attr('href');
-        console.log("the link from the gallery" + thisLink);
+      let thisBackground = '<div class="gallery-overlay" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"></div>';
 
-        let thisButton = '<div class="sqs-block-button-container sqs-block-button-container--left preFade fadeIn galleryButton" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1722245060304_151" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"><a href="' + thisLink + '" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">View Project</a></div>'
-        
-        // add video to the source images parent div
-        $(this).append(thisBackground);
-        $(this).parent().find('.image-slide-title').append(thisButton);
-        // $(this).append(thisButton);
+      let thisLink = $(this).attr('href');
+      console.log("the link from the gallery" + thisLink);
+
+      let thisButton = '<div class="sqs-block-button-container sqs-block-button-container--left preFade fadeIn galleryButton" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1722245060304_151" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"><a href="' + thisLink + '" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">View Project</a></div>'
+
+      // add video to the source images parent div
+      $(this).append(thisBackground);
+      $(this).parent().find('.image-slide-title').append(thisButton);
+      // $(this).append(thisButton);
     }
     /////////////* end gallery vlocks */
 
@@ -99,12 +110,12 @@ function sectionVideoControls() {
       var thisOverlay;
 
       /* For sections wiht B A C K G R O U N D  images */
-      if ($(this).hasClass('hero-video')) {
+      // if ($(this).find('.hero-video')) {
         console.log("HAS SECTION BACKGROUND CLASS" + x);
         overlayDiv = $(this).parent().siblings().first();
         overlayDivContent = $(this).parent().siblings().first().find(".content");
         thisOverlay = $(this).find(".section-background-overlay");
-      }
+      // }
 
       /* For gallery blocks with images */
       // if ($(this).parent().hasClass('margin-wrapper')){

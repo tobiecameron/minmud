@@ -91,7 +91,7 @@ function imageVideoswap() {
 // ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
 function sectionVideoControls(i, currentOne) {
 
-      console.log("VIDEO FULL BACKGROUND DETECTED")
+      console.log("VIDEO FULL BACKGROUND DETECTED" + i)
       //  define the overlay elements
 
       var overlayDiv;

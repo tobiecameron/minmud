@@ -106,11 +106,12 @@ function sectionVideoControls() {
       var thisOverlay;
 
       /* For sections wiht B A C K G R O U N D  images */
-      // if ($(this).parent().hasClass('section-background')) {
+      if ($(this).parent().hasClass('section-background')) {
+        console.log("HAS SECTION BACKGROUND CLASS" + x);
         overlayDiv = $(this).parent().siblings().first();
         overlayDivContent = $(this).parent().siblings().first().find(".content");
         thisOverlay = $(this).find(".section-background-overlay");
-      // }
+      }
 
       /* For gallery blocks with images */
       // if ($(this).parent().hasClass('margin-wrapper')){

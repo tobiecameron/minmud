@@ -136,7 +136,7 @@ function imageGalleryvideoswap() {
   let i = 0;
 
   $(heroParent).each(function (i, obj) {
-    if ($(this).hasClass('margin-wrapper')){
+    if ($(this).parent().hasClass('margin-wrapper')){
     i++;
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     let src = $(this).find("img").attr("data-src").split("/");

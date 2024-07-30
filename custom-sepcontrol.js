@@ -49,7 +49,7 @@ function imageVideoswap() {
     let currVideo = $(this).find("video");
     let currImage = $(this).find("img");
 
-    sectionVideoControls(i);
+    sectionVideoControls(i, currentOne);
 
 
 
@@ -89,10 +89,7 @@ function imageVideoswap() {
 
 
 // ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
-function sectionVideoControls(i) {
-
-  $(".section-background").each(function (i, obj) {
-    if ($(this).find('.hero-video').length !== 0) {
+function sectionVideoControls(i, currentOne) {
 
       console.log("VIDEO FULL BACKGROUND DETECTED")
       //  define the overlay elements
@@ -104,9 +101,9 @@ function sectionVideoControls(i) {
       /* For sections wiht B A C K G R O U N D  images */
       // if ($(this).find('.hero-video')) {
         console.log("HAS SECTION BACKGROUND CLASS" + i);
-        overlayDiv = $(this).parent().siblings().first();
-        overlayDivContent = $(this).parent().siblings().first().find(".content");
-        thisOverlay = $(this).find(".section-background-overlay");
+        overlayDiv = $(currentOne).parent().siblings().first();
+        overlayDivContent = $(currentOne).parent().siblings().first().find(".content");
+        thisOverlay = $(currentOne).find(".section-background-overlay");
       // }
 
       /* For gallery blocks with images */
@@ -170,8 +167,8 @@ function sectionVideoControls(i) {
       //     vid.muted = false;      
       //   }
       // });
-    }
-  });
+  
+
 }
 
 

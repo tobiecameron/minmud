@@ -82,8 +82,8 @@
 }
 
 .galleryButton {
-  position: absolute;
-  bottom: 20%;
+  /* position: absolute; */
+  margin-top: 20px;
 }
 
 

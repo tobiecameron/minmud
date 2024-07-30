@@ -98,7 +98,7 @@ function sectionVideoControls() {
   $(".section-background").each(function (i, obj) {
     if ($(this).find('.hero-video').length !== 0) {
       x++
-      console.log("VIDEO BACKGROUND DETECTED")
+      console.log("VIDEO FULL BACKGROUND DETECTED")
       //  define the overlay elements
 
       var overlayDiv;
@@ -106,7 +106,7 @@ function sectionVideoControls() {
       var thisOverlay;
 
       /* For sections wiht B A C K G R O U N D  images */
-      if ($(this).parent().hasClass('section-background')) {
+      if ($(this).hasClass('hero-video')) {
         console.log("HAS SECTION BACKGROUND CLASS" + x);
         overlayDiv = $(this).parent().siblings().first();
         overlayDivContent = $(this).parent().siblings().first().find(".content");

@@ -20,8 +20,6 @@ $(document).ready(function () {
 
 
 
-// Creaet an array for all film objects to be added
-let imageFilm = [];
 
 function imageVideoswap() {
   // let heroParent = $('img[src$="-hero.jpg"]').parent();
@@ -35,6 +33,7 @@ function imageVideoswap() {
 
   $(heroParent).each(function (i, obj) {
     i++;
+    let currentOne = $(this);
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     let src = $(this).find("img").attr("data-src").split("/");
     // console.log(src);
@@ -49,6 +48,8 @@ function imageVideoswap() {
     $(this).prepend(filmHero);
     let currVideo = $(this).find("video");
     let currImage = $(this).find("img");
+
+    sectionVideoControls(i, currentOne);
 
 
 
@@ -81,19 +82,15 @@ function imageVideoswap() {
     });
 
   });
-  setTimeout(sectionVideoControls,250)
+  // setTimeout(sectionVideoControls,250)
 
 }
 
 
 
 // ADD VIDEO CONTROLS TO BACKGROUND VIDEOS
-function sectionVideoControls() {
-  let x = 0;
+function sectionVideoControls(i, currentOne) {
 
-  $(".section-background").each(function (i, obj) {
-    if ($(this).find('.hero-video').length !== 0) {
-      x++
       console.log("VIDEO FULL BACKGROUND DETECTED")
       //  define the overlay elements
 
@@ -103,10 +100,10 @@ function sectionVideoControls() {
 
       /* For sections wiht B A C K G R O U N D  images */
       // if ($(this).find('.hero-video')) {
-        console.log("HAS SECTION BACKGROUND CLASS" + x);
-        overlayDiv = $(this).parent().siblings().first();
-        overlayDivContent = $(this).parent().siblings().first().find(".content");
-        thisOverlay = $(this).find(".section-background-overlay");
+        console.log("HAS SECTION BACKGROUND CLASS" + i);
+        overlayDiv = $(currentOne).parent().siblings().first();
+        overlayDivContent = $(currentOne).parent().siblings().first().find(".content");
+        thisOverlay = $(currentOne).find(".section-background-overlay");
       // }
 
       /* For gallery blocks with images */
@@ -115,10 +112,10 @@ function sectionVideoControls() {
         // overlayDivContent = $(this).parent().siblings().first().find(".content");
         // thisOverlay = $(this).find(".section-background-overlay");
       // }
-      let thisshowControl = "show" + x;
-      let thishideControl = "hide" + x;
+      let thisshowControl = "show" + i;
+      let thishideControl = "hide" + i;
       
-      let thisoverlayDivContent = overlayDivContent + x;
+      let thisoverlayDivContent = overlayDivContent + i;
 
       $(overlayDiv).append(
         '<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg"><img id="'+ thishideControl +'" class="hideControl ' + thishideControl + '" src="https://minmud.vercel.app/controls/hide.svg">'
@@ -128,11 +125,11 @@ function sectionVideoControls() {
 
       var showButton = document.getElementById(thisshowControl);
       var hideButton = document.getElementById(thishideControl);
-      var vid = document.getElementById('videoControl' + x);
+      var vid = document.getElementById('videoControl' + i);
       // var allVids = document.getElementById('video');
 
       showButton.addEventListener("click", function() {
-        console.log("SHOW LISTENER ACTIVATE" + x);
+        console.log("SHOW LISTENER ACTIVATE" + i);
         if (vid.paused == false) {
           // Reveal the video
           $('body video').each(function(){
@@ -170,8 +167,8 @@ function sectionVideoControls() {
       //     vid.muted = false;      
       //   }
       // });
-    }
-  });
+  
+
 }
 
 

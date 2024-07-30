@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   if ( window.frameElement == null ) {
     imageSectionvideoswap();
-    imageGalleryvideoswap();
+    // imageGalleryvideoswap();
   }
 });
 

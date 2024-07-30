@@ -29,8 +29,10 @@ function imageSectionvideoswap() {
   $(heroParent).each(function (i, obj) {
 
     if ($(this).hasClass('section-background')) {
-
       i++;
+      console.log("This is a Section Backround Video" + i)
+
+
       //replace the source jpg with the MP4 hosted on Vercel via GIT
       let src = $(this).find("img").attr("data-src").split("/");
       // console.log(src);

@@ -78,7 +78,7 @@ function imageSectionvideoswap() {
       let thisshowControl = "show" + i;
       let thishideControl = "hide" + i;
       
-      let thisoverlayDivContent = overlayDivContent + x;
+      let thisoverlayDivContent = overlayDivContent + i;
 
       $(overlayDiv).append(
         '<img id="'+ thisshowControl +'" class="showControl ' + thisshowControl + '" src="https://minmud.vercel.app/controls/show.svg"><img id="'+ thishideControl +'" class="hideControl ' + thishideControl + '" src="https://minmud.vercel.app/controls/hide.svg">'

@@ -19,7 +19,7 @@ $(document).ready(function () {
 //     imageVideoswap();
 // };
 
-
+var sectionVideos = new Array();
 
 function imageSectionvideoswap() {
 
@@ -47,6 +47,9 @@ function imageSectionvideoswap() {
       $(this).prepend(filmHero);
       let currVideo = $(this).find("video");
       let currImage = $(this).find("img");
+
+      sectionVideos.push(currVideo);
+      console.log(sectionVideos);
 
       $(currVideo).on({
         play: function () {

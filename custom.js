@@ -78,7 +78,7 @@ function imageVideoswap() {
       play: function() {
         $(currImage).removeClass('loaded');
         gsap.to(currImage, .5, { opacity: 0, delay: 1});
-        // gsap.to(currImage, .5, { display: "none"});
+        gsap.set(currImage, { display: "none", delay: 1.5});
       }
     });
 

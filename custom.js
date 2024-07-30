@@ -24,7 +24,7 @@ $(document).ready(function () {
 function imageSectionvideoswap() {
 
   let heroParent = $('img[data-image$="-hero.jpg"]').parent();
-  let i = 1;
+  let i = 0;
 
   $(heroParent).each(function (i, obj) {
 

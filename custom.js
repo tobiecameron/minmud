@@ -132,6 +132,7 @@ function imageGalleryvideoswap() {
   let i = 0;
 
   $(heroParent).each(function (i, obj) {
+    if ($(this).parent().hasClass('margin-wrapper')){
     i++;
     //replace the source jpg with the MP4 hosted on Vercel via GIT
     let src = $(this).find("img").attr("data-src").split("/");
@@ -151,7 +152,7 @@ function imageGalleryvideoswap() {
 
 
     ////////////* For the Gallery blocks */
-    if ($(this).parent().hasClass('margin-wrapper')){
+
         $(this).parent().closest('div').addClass('galleryFilm');  //your function
 
         let thisBackground = '<div class="gallery-overlay" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"></div>';
@@ -165,7 +166,6 @@ function imageGalleryvideoswap() {
         $(this).append(thisBackground);
         $(this).parent().find('.image-slide-title').append(thisButton);
         // $(this).append(thisButton);
-    }
     /////////////* end gallery vlocks */
     // console.log(currImage);
 
@@ -176,7 +176,7 @@ function imageGalleryvideoswap() {
         gsap.set(currImage, { display: "none", delay: 1.5});
       }
     });
-
+    }
   });
 }
 

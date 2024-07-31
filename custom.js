@@ -100,6 +100,12 @@ function imageSectionvideoswap() {
           vid.muted = false;
           gsap.to('.sectionOverlay, .sectionOverlay .content', 0, { opacity: 1 }); 
           gsap.to('.sectionBackgroundOverlay', 0, { opacity: .55 });  
+          
+          let x = 1;
+          if (x < i) {
+            gsap.to(".show" + x, 0, { opacity: 1, display: "block" });
+            x++;
+          }
 
           gsap.to([overlayDivContent, thisOverlay], .25, { opacity: 0 });
           gsap.to("." + thisshowControl, .25, { opacity: 0, display: "none" });

@@ -68,6 +68,9 @@ function imageSectionvideoswap() {
       overlayDiv = $(this).parent().siblings().first();
 
       overlayDivContent = $(this).parent().siblings().first().find(".content");
+
+      $(this).find(".section-background-overlay").addClass('sectionBackgroundOverlay');
+
       thisOverlay = $(this).find(".section-background-overlay");
 
       let thisshowControl = "show" + i;
@@ -95,7 +98,9 @@ function imageSectionvideoswap() {
             $(this).prop('muted', true);
           });
           vid.muted = false;
-          gsap.to('.sectionOverlay, .sectionOverlay .content', 0, { opacity: 1 });   
+          gsap.to('.sectionOverlay, .sectionOverlay .content', 0, { opacity: 1 }); 
+          gsap.to('.sectionBackgroundOverlay', 0, { opacity: .55 });  
+
           gsap.to([overlayDivContent, thisOverlay], .25, { opacity: 0 });
           gsap.to("." + thisshowControl, .25, { opacity: 0, display: "none" });
           gsap.to("." + thishideControl, .25, { opacity: .7, display: "block", delay: .25 });

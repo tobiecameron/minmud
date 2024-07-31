@@ -103,9 +103,16 @@ function imageSectionvideoswap() {
           
           $('.showControl').each(function () {
             /*** Do it here globally ***/
+            console.log("A Show Control is revealling");
             gsap.to($(this), 0, { opacity: .7, display: "block" });
-
           });
+
+          $('.hideControl').each(function () {
+            /*** Do it here globally ***/
+            console.log("A Hide Control is hiding");
+            gsap.to($(this), 0, { opacity: 0, display: "none" });
+          });
+      
       
 
 
@@ -119,6 +126,22 @@ function imageSectionvideoswap() {
         if (vid.paused == false) {
           // Reveal the video
           vid.muted = true;
+
+
+          $('.showControl').each(function () {
+            /*** Do it here globally ***/
+            console.log("A Show Control is revealling");
+            gsap.to($(this), 0, { opacity: .7, display: "block" });
+          });
+
+          $('.hideControl').each(function () {
+            /*** Do it here globally ***/
+            console.log("A Hide Control is hiding");
+            gsap.to($(this), 0, { opacity: 0, display: "none" });
+          });
+      
+
+
           gsap.to(thisOverlay, .25, { opacity: .55 });
           gsap.to(overlayDivContent, .25, { opacity: 1 });
           gsap.to("." + thishideControl, .25, { opacity: 0, display: "none" });

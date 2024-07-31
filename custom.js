@@ -103,7 +103,7 @@ function imageSectionvideoswap() {
           
           let x = 1;
           if (x < i) {
-            gsap.to(".show" + x, 0, { opacity: 1, display: "block" });
+            gsap.to("#show" + x, 0, { opacity: .7, display: "block" });
             x++;
           }
 

@@ -101,10 +101,12 @@ function imageSectionvideoswap() {
           gsap.to('.sectionOverlay, .sectionOverlay .content', 0, { opacity: 1 }); 
           gsap.to('.sectionBackgroundOverlay', 0, { opacity: .55 });  
           
-          let x = 1;
+          let x = 0;
           if (x < i) {
-            gsap.to("#show" + x, 0, { opacity: .7, display: "block" });
+          console.log("resetting");
             x++;
+            gsap.to("#show" + x, 0, { opacity: .7, display: "block" });
+        
           }
 
           gsap.to([overlayDivContent, thisOverlay], .25, { opacity: 0 });

@@ -194,6 +194,12 @@ function imageGalleryvideoswap() {
       $(this).append(thisBackground);
       $(this).parent().find('.image-slide-title').append(thisButton);
 
+
+      if ($(this).parent().hasClass('sqs-image-content')) {
+        let altText = $(this).attr('alt');
+        console.log(altText);
+      }
+
       $(currVideo).on({
         play: function () {
           $(currImage).removeClass('loaded');

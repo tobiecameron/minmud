@@ -196,7 +196,7 @@ function imageGalleryvideoswap() {
 
 
       if ($(this).parent().hasClass('sqs-image-content')) {
-        let altText = $(this).attr('alt');
+        let altText = $(this).find('img').attr('alt');
         console.log(altText);
       }
 

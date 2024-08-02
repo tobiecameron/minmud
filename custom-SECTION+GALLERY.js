@@ -1,3 +1,4 @@
+
 // use a script tag or an external JS file
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -161,7 +162,7 @@ function imageGalleryvideoswap() {
   let i = 0;
 
   $(heroParent).each(function (i, obj) {
-    if ($(this).parent().hasClass('margin-wrapper') || ($(this).parent().hasClass('sqs-image-content') ) {
+    if ($(this).parent().hasClass('margin-wrapper')) {
       i++;
       //replace the source jpg with the MP4 hosted on Vercel via GIT
       let src = $(this).find("img").attr("data-src").split("/");

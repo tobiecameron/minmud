@@ -201,12 +201,11 @@ function imageGalleryvideoswap() {
 
       // THis needs solving!!!
 
-      if ($(this).parent('.image-slide-title').length > 0) {
-
-      // if ($(this).parent().find('.galleryFilm').find('.image-slide-title')) {
-      // if ($(this.parent('.image-slide-title').length)) {
-        $(this).append(thisBackground);
+      
+      // if ($(this).parent().eq(0).find('.image-slide-title')) {
+      if($(this).parent().find('.image-slide-title').length !== 0)
         
+        $(this).append(thisBackground);
       }
 
       // END

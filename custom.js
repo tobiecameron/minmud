@@ -200,9 +200,10 @@ function imageGalleryvideoswap() {
 
 
 
-      if ($(this).parent().closest('div').find('.image-slide-title')) {
+      if ($(this).parent().find('.galleryFilm').find('.image-slide-title')) {
       // if ($(this.parent('.image-slide-title').length)) {
         $(this).append(thisBackground);
+        
       }
 
 

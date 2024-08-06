@@ -157,6 +157,13 @@ function imageSectionvideoswap() {
 
 function imageGalleryvideoswap() {
 
+  
+  $('.gallery-block').each(function (i, obj) {
+    $(this).parent().closest('div').addClass('galleryParent');
+    console.log("Located Gallery Block parent");
+  });
+
+
   let heroParent = $('img[data-image$="-hero.jpg"]').parent();
   let i = 0;
 
@@ -183,7 +190,7 @@ function imageGalleryvideoswap() {
       ////////////* For the Gallery blocks */
 
       $(this).parent().closest('div').addClass('galleryFilm');  //your function
-      
+
       let thisBackground = '<div class="gallery-overlay" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"></div>';
 
       let thisLink = $(this).attr('href');
@@ -191,21 +198,27 @@ function imageGalleryvideoswap() {
 
       let thisButton = '<div class="sqs-block-button-container sqs-block-button-container--left preFade fadeIn galleryButton" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1722245060304_151" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"><a href="' + thisLink + '" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">View Project</a></div>'
 
-      // if ($(this).parent().find('.image-slide-title')){ 
-
       if ($this.parent('.image-slide-title').length) {
-
-        // $(this).append(thisBackground);
+        $(this).append(thisBackground);
       }
+// additional code
+
 
       $(this).parent().find('.image-slide-title').append(thisButton);
 
+      // $(this).parent().find('.image-slide-title').append(thisButton);
 
+      if ($(this).parent().find('.image-slide-title').text().length > 0) {
+        // $(this).parent().find('.image-slide-title').addClass('paddingtop-10');
+      }
+
+
+      /* For IMAGE BLOCKS ONLY */
       if ($(this).parent().hasClass('sqs-image-content')) {
         let altText = $(this).find('img').attr('alt');
         console.log(altText);
 
-        let imageOverlay = '<div class="image-slide-title">' + altText + '<div class="sqs-block-button-container sqs-block-button-container--left preFade fadeIn galleryButton" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1722245060304_151" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"><a href="' + thisLink + 'class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">View Project</a></div></div>'
+        let imageOverlay = '<div class="image-slide-title">' + altText + '<div class="sqs-block-button-container sqs-block-button-container--left preFade fadeIn galleryButton" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1722245060304_151" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"><a href="' + thisLink +  '" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">View Project</a></div></div>'
         
         $(this).append(imageOverlay);
       }

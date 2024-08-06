@@ -193,9 +193,9 @@ function imageGalleryvideoswap() {
 
       // if ($(this).parent().find('.image-slide-title')){ 
 
-      if ($this.parents('.image-slide-title').length) {
+      if ($this.parent('.image-slide-title').length) {
 
-        $(this).append(thisBackground);
+        // $(this).append(thisBackground);
       }
 
       $(this).parent().find('.image-slide-title').append(thisButton);

@@ -201,7 +201,7 @@ function imageGalleryvideoswap() {
 
       // THis needs solving!!!
 
-      if ($(this).parents('.image-slide-title').length) {
+      if ($(this).parent('.image-slide-title').length > 0) {
 
       // if ($(this).parent().find('.galleryFilm').find('.image-slide-title')) {
       // if ($(this.parent('.image-slide-title').length)) {

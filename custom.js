@@ -203,7 +203,11 @@ function imageGalleryvideoswap() {
 
       
       // if ($(this).parent().eq(0).find('.image-slide-title')) {
-      if ( $(this).parent().children('div').find('.image-slide-title') || $(this).parent().find('.image-slide-title')) {
+      if ($(this).parent().find('.image-slide-title')) {
+        $(this).append(thisBackground);
+      }
+
+      if ( $(this).parent().children('div').find('.image-slide-title')) {
         $(this).append(thisBackground);
       }
       // END

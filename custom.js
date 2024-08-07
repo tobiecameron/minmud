@@ -211,7 +211,7 @@ function imageGalleryvideoswap() {
 
       console.log("IDENTIFY THIS" +  theVideodiv +  i);
 
-      if (thisLink !== null){
+      if (thisLink == null){
         console.log("text in the Slide Title Detected");
         $(this).append(thisBackground);
       }

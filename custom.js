@@ -169,7 +169,7 @@ function imageGalleryvideoswap() {
 
   $(heroParent).each(function (i, obj) {
     // if ($(this).parent().hasClass('margin-wrapper') || ($(this).parent().hasClass('sqs-image-content'))) {
-    if ($(this).hasClass('image-slide-title') || ($(this).parent().hasClass('sqs-image-content'))) {
+    if ($(this).find('.image-slide-title') || ($(this).parent().hasClass('sqs-image-content'))) {
       i++;
       //replace the source jpg with the MP4 hosted on Vercel via GIT
       let src = $(this).find("img").attr("data-src").split("/");

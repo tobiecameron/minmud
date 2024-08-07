@@ -213,11 +213,6 @@ function imageGalleryvideoswap() {
 
       $(this).parent().find('.image-slide-title').append(thisButton);
 
-      if ($(this).parent().find('.image-slide-title').text().length > 0) {
-        // $(this).parent().find('.image-slide-title').addClass('paddingtop-10');
-      }
-
-
 
 
       /* For IMAGE BLOCKS ONLY */
@@ -230,15 +225,18 @@ function imageGalleryvideoswap() {
         $(this).append(imageOverlay);
       }
 
+      setTimeout(
+        function() 
+        {
+          if (!$('.galleryFilm').hasClass("image-slide-title")) {
+            console.log(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>REMOVING gallery-overlay")
+            // $(this).append(thisBackground);
+            // $("div.gallery-overlay").remove();
+          }    
+          //do something special
+        }, 5000);
 
-
-      if (!$('.galleryFilm').hasClass("image-slide-title")) {
-        console.log(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>REMOVING gallery-overlay")
-        // $(this).append(thisBackground);
-        // $("div.gallery-overlay").remove();
-      }
-    
-    
+      
 
 
       $(currVideo).on({
@@ -250,6 +248,7 @@ function imageGalleryvideoswap() {
       });
     }
   });
+  
 
 }
 

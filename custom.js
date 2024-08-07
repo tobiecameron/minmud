@@ -218,6 +218,8 @@ function imageGalleryvideoswap() {
       }
 
 
+
+
       /* For IMAGE BLOCKS ONLY */
       if ($(this).parent().hasClass('sqs-image-content')) {
         let altText = $(this).find('img').attr('alt');
@@ -228,6 +230,16 @@ function imageGalleryvideoswap() {
         $(this).append(imageOverlay);
       }
 
+
+
+      if (!$('.galleryFilm').hasClass("image-slide-title")) {
+        // $(this).append(thisBackground);
+        $("div.gallery-overlay").remove();
+      }
+    
+    
+
+
       $(currVideo).on({
         play: function () {
           $(currImage).removeClass('loaded');
@@ -237,14 +249,6 @@ function imageGalleryvideoswap() {
       });
     }
   });
-
-  galleryFilm
-
-  if (!$('.galleryFilm').hasClass("image-slide-title")) {
-    // $(this).append(thisBackground);
-    $("div.gallery-overlay").remove();
-  }
-
 
 }
 

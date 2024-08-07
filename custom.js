@@ -228,7 +228,7 @@ function imageGalleryvideoswap() {
       setTimeout(
         function() 
         {
-          if (!$('.galleryFilm').hasClass("image-slide-title")) {
+          if (!$(this).find(".image-slide-title")) {
             console.log(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>REMOVING gallery-overlay")
             // $(this).append(thisBackground);
             // $("div.gallery-overlay").remove();

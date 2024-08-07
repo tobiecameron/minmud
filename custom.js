@@ -207,7 +207,11 @@ function imageGalleryvideoswap() {
       // if ($(this).parent().children('div').find('.image-slide-title')) {
 
       // if ($(this).find(".image-slide-title")) {
-      $(this).append(thisBackground);
+
+      if ($(this).text().trim().length) {
+        $(this).append(thisBackground);
+    }
+      // $(this).append(thisBackground);
       // }
 
       // END

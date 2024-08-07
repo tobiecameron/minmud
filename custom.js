@@ -171,7 +171,7 @@ function imageGalleryvideoswap() {
     // if ($(this).parent().hasClass('margin-wrapper') || ($(this).parent().hasClass('sqs-image-content'))) {
     if ($(this).find('.image-slide-title') || ($(this).parent().hasClass('sqs-image-content'))) {
       i++;
-      let theVideodev = $(this)
+      let theVideodiv = $(this)
       //replace the source jpg with the MP4 hosted on Vercel via GIT
       let src = $(this).find("img").attr("data-src").split("/");
       // console.log(src);
@@ -209,9 +209,9 @@ function imageGalleryvideoswap() {
 
       // if ($(this).find(".image-slide-title")) {
 
-      console.log("IDENTIFY THIS" +  theVideodev +  i);
+      console.log("IDENTIFY THIS" +  theVideodiv +  i);
 
-      if ($(this).find("image-slide-title").text().trim().length > 0) {
+      if ($(theVideodiv).find("image-slide-title").text().trim().length > 0) {
         console.log("text in the Slide Title Detected");
         $(this).append(thisBackground);
       }

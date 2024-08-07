@@ -168,7 +168,8 @@ function imageGalleryvideoswap() {
   let i = 0;
 
   $(heroParent).each(function (i, obj) {
-    if ($(this).parent().hasClass('margin-wrapper') || ($(this).parent().hasClass('sqs-image-content'))) {
+    // if ($(this).parent().hasClass('margin-wrapper') || ($(this).parent().hasClass('sqs-image-content'))) {
+    if ($(this).hasClass('image-slide-title') || ($(this).parent().hasClass('sqs-image-content'))) {
       i++;
       //replace the source jpg with the MP4 hosted on Vercel via GIT
       let src = $(this).find("img").attr("data-src").split("/");
@@ -205,9 +206,9 @@ function imageGalleryvideoswap() {
       // if ($(this).parent().eq(0).find('.image-slide-title')) {
       // if ($(this).parent().children('div').find('.image-slide-title')) {
 
-      if ($(this).find(".image-slide-title")) {
-        $(this).append(thisBackground);
-      }
+      // if ($(this).find(".image-slide-title")) {
+      $(this).append(thisBackground);
+      // }
 
       // END
 
@@ -225,16 +226,16 @@ function imageGalleryvideoswap() {
         $(this).append(imageOverlay);
       }
 
-      setTimeout(
-        function() 
-        {
-          if ($(this).find(".image-slide-title")) {
-            console.log(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>FINDING gallery-overlay")
-            // $(this).append(thisBackground);
-            // $("div.gallery-overlay").remove();
-          }    
-          //do something special
-        }, 5000);
+      // setTimeout(
+      //   function() 
+      //   {
+      //     if ($(this).find(".image-slide-title")) {
+      //       console.log(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>FINDING gallery-overlay")
+      //       // $(this).append(thisBackground);
+      //       // $("div.gallery-overlay").remove();
+      //     }    
+      //     //do something special
+      //   }, 5000);
 
       
 

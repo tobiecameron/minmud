@@ -205,14 +205,11 @@ function imageGalleryvideoswap() {
       // if ($(this).parent().eq(0).find('.image-slide-title')) {
       // if ($(this).parent().children('div').find('.image-slide-title')) {
 
-      if ($(this).find('.image-slide-title')) {
-
+      if ($(this).find(".image-slide-title")) {
         $(this).append(thisBackground);
       }
 
       // END
-
-
 
       $(this).parent().find('.image-slide-title').append(thisButton);
 
@@ -240,6 +237,15 @@ function imageGalleryvideoswap() {
       });
     }
   });
+
+  galleryFilm
+
+  if (!$('.galleryFilm').hasClass("image-slide-title")) {
+    // $(this).append(thisBackground);
+    $("div.gallery-overlay").remove();
+  }
+
+
 }
 
 

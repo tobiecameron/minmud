@@ -208,7 +208,10 @@ function imageGalleryvideoswap() {
 
       // if ($(this).find(".image-slide-title")) {
 
+      console.log(this + i);
+
       if ($(this).find("image-slide-title").text().trim().length > 0) {
+        console.log("text in the Slide Title Detected");
         $(this).append(thisBackground);
       }
       // $(this).append(thisBackground);

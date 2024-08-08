@@ -187,8 +187,6 @@ function imageGalleryvideoswap() {
       let currVideo = $(this).find("video");
       let currImage = $(this).find("img");
 
-
-
       ////////////* For the Gallery blocks */
 
       $(this).parent().closest('div').addClass('galleryFilm');  //your function
@@ -196,57 +194,28 @@ function imageGalleryvideoswap() {
       let thisBackground = '<div class="gallery-overlay" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"></div>';
 
       let thisLink = $(this).attr('href');
-      console.log("the link from the gallery" + thisLink);
+      // console.log("the link from the gallery" + thisLink);
 
       let thisButton = '<div class="sqs-block-button-container sqs-block-button-container--left preFade fadeIn galleryButton" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1722245060304_151" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"><a href="' + thisLink + '" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">View Project</a></div>'
 
 
-      // THis needs solving!!!
-
-      
-      // if ($(this).parent().eq(0).find('.image-slide-title')) {
-      // if ($(this).parent().children('div').find('.image-slide-title')) {
-
-      // if ($(this).find(".image-slide-title")) {
-
-      console.log("IDENTIFY THIS" +  theVideodiv +  i);
-
+      // Only add overlay if link exists //
       if (thisLink !== undefined){
-        console.log("text in the Slide Title Detected");
+        // console.log("text in the Slide Title Detected");
         $(this).append(thisBackground);
       }
-      // $(this).append(thisBackground);
-      // }
-
-      // END
 
       $(this).parent().find('.image-slide-title').append(thisButton);
-
-
 
       /* For IMAGE BLOCKS ONLY */
       if ($(this).parent().hasClass('sqs-image-content')) {
         let altText = $(this).find('img').attr('alt');
-        console.log(altText);
+        // console.log(altText);
 
         let imageOverlay = '<div class="image-slide-title">' + altText + '<div class="sqs-block-button-container sqs-block-button-container--left preFade fadeIn galleryButton" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1722245060304_151" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"><a href="' + thisLink +  '" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">View Project</a></div></div>'
         
         $(this).append(imageOverlay);
       }
-
-      // setTimeout(
-      //   function() 
-      //   {
-      //     if ($(this).find(".image-slide-title")) {
-      //       console.log(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>FINDING gallery-overlay")
-      //       // $(this).append(thisBackground);
-      //       // $("div.gallery-overlay").remove();
-      //     }    
-      //     //do something special
-      //   }, 5000);
-
-      
-
 
       $(currVideo).on({
         play: function () {

@@ -170,7 +170,6 @@ function imageGalleryvideoswap() {
   $(heroParent).each(function (i, obj) {
     // if ($(this).parent().hasClass('margin-wrapper') || ($(this).parent().hasClass('sqs-image-content'))) {
     if ($(this).find('.image-slide-title') || ($(this).parent().hasClass('sqs-image-content'))) {
-      
       i++;
       let theVideodiv = $(this)
       //replace the source jpg with the MP4 hosted on Vercel via GIT
@@ -219,13 +218,14 @@ function imageGalleryvideoswap() {
         let altText = $(this).find('img').attr('alt');
        
           console.log(altText);
-          console.log("This is the Alt Text value of an image" + altText);
+          console.log("This is the Alt Text value of an image " + altText);
 
           let imageOverlay = '<div class="image-slide-title">' + altText + '<div class="sqs-block-button-container sqs-block-button-container--left preFade fadeIn galleryButton" data-animation-role="button" data-alignment="left" data-button-size="medium" data-button-type="primary" id="yui_3_17_2_1_1722245060304_151" style="transition-timing-function: ease; transition-duration: 0.9s; transition-delay: 0.229091s;"><a href="' + thisLink + '" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">View Project</a></div></div>'
 
           $(this).append(imageOverlay);
         } else {
           console.log("This image has no alt")
+          $(this).find('div').removeClass("gallery-overlay");
         }
       }
     
